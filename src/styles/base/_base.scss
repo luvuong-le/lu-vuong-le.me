@@ -1,5 +1,34 @@
+/*****
+Abstract
+******/
+@import "../abstract/mixins.scss";
+@import "../abstract/utils.scss";
+@import "../abstract/variables.scss";
+
+/*****
+Components
+******/
+@import "../components/nav.scss";
+@import "../components/section.scss";
+@import "../components/scrollbar.scss";
+
+/*****
+Fonts
+******/
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Megrim&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+    font-size: 1.6rem;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
 }
