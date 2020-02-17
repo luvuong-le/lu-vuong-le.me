@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react"
 
-export default function Navigation() {    
+export default function Navigation() {
     return (
         <nav className="nav">
             <div className="nav__logo">
