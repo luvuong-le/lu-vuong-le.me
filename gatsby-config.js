@@ -35,6 +35,7 @@ module.exports = {
                 aliases: {
                     "@styles": `src/styles`,
                     "@components": `src/components`,
+                    "@assets": `src/assets`,
                 },
             },
         },

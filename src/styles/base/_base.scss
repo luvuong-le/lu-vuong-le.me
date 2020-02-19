@@ -1,13 +1,15 @@
 /*****
 Abstract
 ******/
+@import "../abstract/variables.scss";
 @import "../abstract/mixins.scss";
 @import "../abstract/utils.scss";
-@import "../abstract/variables.scss";
+@import "../abstract/animations.scss";
 
 /*****
 Components
 ******/
+@import "../components/btn.scss";
 @import "../components/nav.scss";
 @import "../components/section.scss";
 @import "../components/scrollbar.scss";
@@ -17,6 +19,16 @@ Fonts
 ******/
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Megrim&display=swap');
+
+/*****
+Page Specific Styles
+******/
+@import "../pages/landing.scss";
+
+/*****
+Vendor / Third Party Custom Styles
+******/
+@import "../vendor/typed.scss";
 
 * {
     padding: 0;
@@ -30,5 +42,6 @@ html, body {
     height: 100%;
     width: 100%;
     font-size: 62.5%;
-    font-family: 'Poppins', sans-serif;
+    font-family: $primary-font;
+    background: $primary-background;
 }

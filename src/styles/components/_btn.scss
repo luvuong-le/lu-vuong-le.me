@@ -1,0 +1,21 @@
+.btn {
+    padding: $btn-padding;
+    font-family: $primary-font;
+    font-size: 1.3rem;
+    border-radius: 3px;
+
+    &--primary {
+        border: 3px solid $secondary;
+        background: $primary-background;
+        color: #ffffff;
+        
+
+        &:not(:first-child) {
+            margin: 0 2rem;
+        }
+    }
+
+    &--secondary {
+
+    }
+}
