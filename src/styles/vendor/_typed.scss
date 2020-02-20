@@ -1,3 +1,9 @@
 .typed {
-    
+    & span {
+        font-weight: bold;
+    }   
+}
+
+.typed-cursor {
+    font-size: 2rem;
 }

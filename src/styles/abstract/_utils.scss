@@ -12,6 +12,10 @@
     margin-top: 3rem;
 }
 
+.margin-l-md {
+    margin-left: 3rem;
+}
+
 .margin-t-sm {
     margin-top: 1rem;
 }
@@ -28,4 +32,32 @@
 /* Font Size Styles */
 .fsize-l {
     font-size: 2.5rem;
+}
+
+.fsize-m {
+    font-size: 2rem;
+}
+
+.fsize-sm {
+    font-size: 1.6rem;
+}
+
+
+.fweight-b {
+    font-weight: bold;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+/* Color Styles */
+.color {
+    &--tertiary {
+        color: $tertiary;
+    }
+
+    &--white {
+        color: #ffffff;
+    }
 }

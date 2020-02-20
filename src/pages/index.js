@@ -12,12 +12,8 @@ const IndexPage = () => {
 
     useEffect(() => {
         const typedJSOptions = {
-            strings: [
-                "<i>> Software Engineer</i>",
-                "<i>> Mentor</i>",
-                "<i>> Designer</i>",
-            ],
-            typeSpeed: 40,
+            strings: ["Software Engineer.", "Mentor.", "Designer."],
+            typeSpeed: 100,
             loop: true,
         }
 
@@ -41,30 +37,48 @@ const IndexPage = () => {
                             <h2>
                                 Welcome!{" "}
                                 <span
-                                    class="anim anim--wave margin-l-sm"
+                                    className="anim anim--wave margin-l-sm"
                                     role="img"
                                     aria-label="jsx-a11y/accessible-emoji"
                                 >
                                     👋
                                 </span>
                             </h2>
-                            <h1>I'm Lu-Vuong Le</h1>
-                            <span class="typed fsize-l" ref={typedEl}></span>
+                            <h1 className="margin-t-sm">I'm Lu-Vuong</h1>
+                            <div className="typed margin-t-sm">
+                                <span className="fsize-m fweight-b color--white">
+                                    {"> "}
+                                </span>
+                                <span
+                                    className="color--tertiary fsize-m"
+                                    ref={typedEl}
+                                ></span>
+                            </div>
                         </div>
                         <div className="landing__body">
                             <div className="flex">
-                                <p>I build web apps</p>
-                                <p>
-                                    I create efficient solutions for companies
-                                </p>
-                            </div>
-                            <div className="landing__cta margin-t-md">
-                                <button className="btn btn--primary">
-                                    Get In Touch
-                                </button>
-                                <button className="btn btn--primary">
-                                    Resume
-                                </button>
+                                <div className="flex flex-column">
+                                    <p>
+                                        Software Engineer with a sound
+                                        understanding of the SDLC, skilled in
+                                        designing and building stable web based
+                                        technical solutions to solve business
+                                        problems
+                                    </p>
+                                    <button className="btn btn--primary btn--block margin-t-md">
+                                        Get In Touch!
+                                    </button>
+                                </div>
+                                <div className="flex flex-column margin-l-md">
+                                    <p>
+                                        Passionate about creating software
+                                        solutions in the modern web space and
+                                        learning about new technologies
+                                    </p>
+                                    <button className="btn btn--primary btn--block margin-t-md">
+                                        Resume
+                                    </button>
+                                </div>
                             </div>
                             <div className="landing__img">
                                 <img src={LandingImage} alt="Undraw Coding" />

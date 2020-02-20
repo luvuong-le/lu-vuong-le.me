@@ -1,21 +1,22 @@
 .btn {
     padding: $btn-padding;
     font-family: $primary-font;
-    font-size: 1.3rem;
+    font-size: 1rem;
     border-radius: 3px;
 
     &--primary {
-        border: 3px solid $secondary;
-        background: $primary-background;
+        border: 0;
+        font-weight: bold;
+        background: $tertiary;
         color: #ffffff;
-        
-
-        &:not(:first-child) {
-            margin: 0 2rem;
-        }
     }
 
     &--secondary {
 
+    }
+
+    &--block {
+        display: block;
+        width: 100%;
     }
 }

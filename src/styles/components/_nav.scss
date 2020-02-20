@@ -45,7 +45,7 @@
     /* Navigation Mobile Mode */
     &--mobile {
         display: none;
-        padding: 2rem 2rem;
+        padding: 2rem 4rem;
         @include breakpoint(phone) {
             display: flex;
         }
@@ -76,11 +76,22 @@
             height: 3px;
             margin: 3px 0;
             width: 30px;
-            background: #ffffff;
+            background: #ffffff; 
+            transition: width 1s ease;
         }
 
         & > span:nth-child(1) {
             width: 15px;
+            animation: navHamburgerSpanLoadHalf 1s ease;
+        }
+
+        & > span:nth-child(2) {
+            animation: navHamburgerSpanLoadFull 1s ease;
+        }
+
+        & > span:nth-child(3) {
+            width: 15px;
+            animation: navHamburgerSpanLoadHalf 1s ease;  
         }
     }
 }
