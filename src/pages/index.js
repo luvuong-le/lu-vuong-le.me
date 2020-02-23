@@ -44,7 +44,20 @@ const IndexPage = () => {
                                     👋
                                 </span>
                             </h2>
-                            <h1 className="margin-t-sm">I'm Lu-Vuong</h1>
+                            <h1 className="margin-t-sm">
+                                <span className="anim--hover-rotate fsize-l">I</span>
+                                <span className="anim--hover-rotate fsize-l">'</span>
+                                <span className="anim--hover-rotate fsize-l">m</span>
+                                {' '}
+                                <span className="anim--hover-rotate fsize-l">L</span>
+                                <span className="anim--hover-rotate fsize-l">u</span>
+                                <span className="anim--hover-rotate fsize-l">-</span>
+                                <span className="anim--hover-rotate fsize-l">V</span>
+                                <span className="anim--hover-rotate fsize-l">u</span>
+                                <span className="anim--hover-rotate fsize-l">o</span>
+                                <span className="anim--hover-rotate fsize-l">n</span>
+                                <span className="anim--hover-rotate fsize-l">g</span>
+                            </h1>
                             <div className="typed margin-t-sm">
                                 <span className="fsize-m fweight-b color--white">
                                     {"> "}
@@ -76,12 +89,40 @@ const IndexPage = () => {
                                         learning about new technologies
                                     </p>
                                     <button className="btn btn--primary btn--block margin-t-md">
-                                        Resume
+                                        View My Resume
                                     </button>
                                 </div>
                             </div>
                             <div className="landing__img">
                                 <img src={LandingImage} alt="Undraw Coding" />
+                            </div>
+                        </div>
+                    </div>
+                </Container>
+            </section>
+
+            {/* About Section */}
+            <section
+                id="sectionAbout"
+                className="section section--primary-blue section__about"
+            >
+                <Container>
+                    <div className="about">
+                        <div className="about section__header">
+                            <h1>About Me</h1>
+                        </div>
+                        <div className="section section__content">
+                            <div className="about__block">
+                                <h1>Me</h1>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam non adipisci odio ducimus consequuntur eligendi doloremque ut numquam quia vitae. Velit non dicta magni est, nemo dolore adipisci cupiditate nobis?</p>
+                            </div>
+                            <div className="about__block">
+                                <h1>Designer</h1>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam non adipisci odio ducimus consequuntur eligendi doloremque ut numquam quia vitae. Velit non dicta magni est, nemo dolore adipisci cupiditate nobis?</p>
+                            </div>
+                            <div className="about__block">
+                                <h1>Mentor</h1>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam non adipisci odio ducimus consequuntur eligendi doloremque ut numquam quia vitae. Velit non dicta magni est, nemo dolore adipisci cupiditate nobis?</p>
                             </div>
                         </div>
                     </div>

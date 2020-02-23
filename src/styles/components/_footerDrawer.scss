@@ -1,19 +1,35 @@
 .drawer {
     &__toggle {
         color: #ffffff;
-        border: 1.5px solid #ffffff;
-        
+
         & img {
             display: block;
             width: 100%;
             height: 100%;
             border: 1.5px solid #ffffff;
-            padding: 1rem;
             border-radius: 100%;
+            padding: 1rem;
         }
     }
 
     &__content {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 0;
+        
+        transition: max-height 0.5s cubic-bezier(.53,-0.29,.61,1.84);
 
+        & li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 1rem 0;
+            margin: 2px 0;
+            border-radius: 100%;
+            border: 1.5px solid #ffffff;
+        }
     }
 }

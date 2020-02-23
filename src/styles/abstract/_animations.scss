@@ -4,6 +4,17 @@
         transition: transform 1s ease;
         animation: wave 1s infinite ease;
     }
+
+    &--hover-rotate {
+        display: inline-block;
+
+        &:hover {
+            color: $tertiary;
+            font-weight: bold;
+            transform: rotate(360deg);
+            transition: all .5s cubic-bezier(0.25, 0.25, 0.5, 1.9);
+        }
+    }
 }
 
 @keyframes wave {
