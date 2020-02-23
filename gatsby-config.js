@@ -36,6 +36,7 @@ module.exports = {
                     "@styles": `src/styles`,
                     "@components": `src/components`,
                     "@assets": `src/assets`,
+                    "@sections": `src/sections`,
                 },
             },
         },

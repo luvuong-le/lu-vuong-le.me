@@ -3,7 +3,7 @@ import React from "react"
 export default function Navigation() {
     return (
         <nav className="nav">
-            <div className="nav__logo">
+            <div className="nav__logo anim--fadeInRight">
                 <span className="nav__logo-text">Lu-Vuong Le</span>
             </div>
             <ul className="nav__list">

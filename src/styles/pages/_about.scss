@@ -1,5 +1,4 @@
 .about {
-
     &__block {
         display: flex;
         flex-direction: column;
@@ -9,7 +8,7 @@
         margin: 4rem 0;
 
         & h2 {
-            margin: 0 0 1rem 0;
+            margin: 1rem 0 1rem 0;
         }
 
         & p {
@@ -19,6 +18,26 @@
         & img {
             width: 70%;
             margin-bottom: 1rem;
+        }
+
+        &--profile {
+            position: relative;
+
+            & > img {
+                position: relative;
+                width: 50%;
+                z-index: 11;
+            }
+
+            &::after {
+                position: absolute;
+                top: 5px;
+                left: 28%;
+                content: '';
+                border: 2px solid #ffffff;
+                height: 95%;
+                width: 50%;
+            }
         }
     }
 }

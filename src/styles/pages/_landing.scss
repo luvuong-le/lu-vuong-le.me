@@ -2,10 +2,12 @@
     &__header {
         & h2 {
             font-size: 2rem;
+            animation-duration: .5s;
         }
 
         & h1 {
             font-size: 2.5rem;
+            animation-duration: 1s;
         }
     }
 

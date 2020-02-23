@@ -20,7 +20,7 @@ export default function MobileNavigation() {
 
     return (
         <nav className="nav nav--mobile">
-            <div className="nav__logo">
+            <div className="nav__logo anim--fadeInRight">
                 <span className="nav__logo-text">Lu-Vuong Le</span>
             </div>
             <div

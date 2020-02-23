@@ -1,6 +1,6 @@
 .section {
     height: 100vh;
-    padding: 2rem 0;
+    padding: 0 0 2rem 0;
 
     @include breakpoint(phone) {
         height: 100%;
