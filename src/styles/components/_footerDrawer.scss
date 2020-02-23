@@ -1,4 +1,9 @@
 .drawer {
+    background: $primary-background;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.7);
+    padding: .5rem;
+    border-radius: 30px;
+
     &__toggle {
         color: #ffffff;
 
@@ -18,7 +23,7 @@
         overflow: hidden;
         max-height: 0;
         
-        transition: max-height 0.5s cubic-bezier(.53,-0.29,.61,1.84);
+        transition: max-height .1s cubic-bezier(.53,-0.29,.61,1.84);
 
         & li {
             list-style: none;
@@ -30,6 +35,10 @@
             margin: 2px 0;
             border-radius: 100%;
             border: 1.5px solid #ffffff;
+
+            & img {
+                width: auto;
+            }
         }
     }
 }

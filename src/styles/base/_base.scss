@@ -26,6 +26,7 @@ Fonts
 Page Specific Styles
 ******/
 @import "../pages/landing.scss";
+@import "../pages/about.scss";
 
 /*****
 Vendor / Third Party Custom Styles
@@ -50,4 +51,14 @@ html, body {
 
 h1 {
     font-size: $primary-font-size-lrg;
+}
+
+img {
+    width: 100%;
+}
+
+@include breakpoint(phone) {
+    p {
+        font-size: 1.2rem;
+    }
 }

@@ -1,0 +1,24 @@
+.about {
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+        margin: 4rem 0;
+
+        & h2 {
+            margin: 0 0 1rem 0;
+        }
+
+        & p {
+
+        }
+
+        & img {
+            width: 70%;
+            margin-bottom: 1rem;
+        }
+    }
+}

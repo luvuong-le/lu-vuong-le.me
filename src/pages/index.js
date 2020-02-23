@@ -5,6 +5,9 @@ import Container from "@components/layout/container"
 import SEO from "@components/seo/seo"
 
 import LandingImage from "@assets/images/undraw-coding.svg"
+import MentorSVG from "@assets/images/undraw_professor_8lrt.svg"
+import DesignerSVG from "@assets/images/undraw_trendy_interface_lg8x.svg"
+
 import Typed from "typed.js"
 
 const IndexPage = () => {
@@ -45,18 +48,39 @@ const IndexPage = () => {
                                 </span>
                             </h2>
                             <h1 className="margin-t-sm">
-                                <span className="anim--hover-rotate fsize-l">I</span>
-                                <span className="anim--hover-rotate fsize-l">'</span>
-                                <span className="anim--hover-rotate fsize-l">m</span>
-                                {' '}
-                                <span className="anim--hover-rotate fsize-l">L</span>
-                                <span className="anim--hover-rotate fsize-l">u</span>
-                                <span className="anim--hover-rotate fsize-l">-</span>
-                                <span className="anim--hover-rotate fsize-l">V</span>
-                                <span className="anim--hover-rotate fsize-l">u</span>
-                                <span className="anim--hover-rotate fsize-l">o</span>
-                                <span className="anim--hover-rotate fsize-l">n</span>
-                                <span className="anim--hover-rotate fsize-l">g</span>
+                                <span className="anim--hover-rotate fsize-l">
+                                    I
+                                </span>
+                                <span className="anim--hover-rotate fsize-l">
+                                    '
+                                </span>
+                                <span className="anim--hover-rotate fsize-l">
+                                    m
+                                </span>{" "}
+                                <span className="anim--hover-rotate fsize-l">
+                                    L
+                                </span>
+                                <span className="anim--hover-rotate fsize-l">
+                                    u
+                                </span>
+                                <span className="anim--hover-rotate fsize-l">
+                                    -
+                                </span>
+                                <span className="anim--hover-rotate fsize-l">
+                                    V
+                                </span>
+                                <span className="anim--hover-rotate fsize-l">
+                                    u
+                                </span>
+                                <span className="anim--hover-rotate fsize-l">
+                                    o
+                                </span>
+                                <span className="anim--hover-rotate fsize-l">
+                                    n
+                                </span>
+                                <span className="anim--hover-rotate fsize-l">
+                                    g
+                                </span>
                             </h1>
                             <div className="typed margin-t-sm">
                                 <span className="fsize-m fweight-b color--white">
@@ -113,16 +137,36 @@ const IndexPage = () => {
                         </div>
                         <div className="section section__content">
                             <div className="about__block">
-                                <h1>Me</h1>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam non adipisci odio ducimus consequuntur eligendi doloremque ut numquam quia vitae. Velit non dicta magni est, nemo dolore adipisci cupiditate nobis?</p>
+                                <h2>{"</Me>"}</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Ipsam non adipisci odio
+                                    ducimus consequuntur eligendi doloremque ut
+                                    numquam quia vitae. Velit non dicta magni
+                                    est, nemo dolore adipisci cupiditate nobis?
+                                </p>
                             </div>
                             <div className="about__block">
-                                <h1>Designer</h1>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam non adipisci odio ducimus consequuntur eligendi doloremque ut numquam quia vitae. Velit non dicta magni est, nemo dolore adipisci cupiditate nobis?</p>
+                                <img src={DesignerSVG} alt="Designer" />
+                                <h2>Designer</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Ipsam non adipisci odio
+                                    ducimus consequuntur eligendi doloremque ut
+                                    numquam quia vitae. Velit non dicta magni
+                                    est, nemo dolore adipisci cupiditate nobis?
+                                </p>
                             </div>
                             <div className="about__block">
-                                <h1>Mentor</h1>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam non adipisci odio ducimus consequuntur eligendi doloremque ut numquam quia vitae. Velit non dicta magni est, nemo dolore adipisci cupiditate nobis?</p>
+                                <img src={MentorSVG} alt="Mentor / Professor" />
+                                <h2>Mentor</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Ipsam non adipisci odio
+                                    ducimus consequuntur eligendi doloremque ut
+                                    numquam quia vitae. Velit non dicta magni
+                                    est, nemo dolore adipisci cupiditate nobis?
+                                </p>
                             </div>
                         </div>
                     </div>
