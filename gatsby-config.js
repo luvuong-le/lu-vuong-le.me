@@ -36,9 +36,8 @@ module.exports = {
                     "@styles": `src/styles`,
                     "@components": `src/components`,
                     "@assets": `src/assets`,
-                    "@sections": `src/sections`,
                 },
-            },
+                },
         },
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
