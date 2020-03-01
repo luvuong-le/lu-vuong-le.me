@@ -1,11 +1,12 @@
 import React from "react"
-import ResumePDF from "@assets/docs/Resume.pdf"
 
 export default function Navigation() {
     return (
         <nav className="nav">
             <div className="nav__logo anim--fadeInRight">
-                <span className="nav__logo-text">Lu-Vuong Le</span>
+                <a href="#sectionLanding">
+                    <span className="nav__logo-text">Lu-Vuong Le</span>
+                </a>
             </div>
             <ul className="nav__list">
                 <li className="nav__item">
@@ -18,7 +19,7 @@ export default function Navigation() {
                     <a href="#sectionContact">Contact</a>
                 </li>
                 <li className="nav__item btn btn--primary">
-                    <a href={ResumePDF} download>
+                    <a className="color--white" href={""} download>
                         Resume
                     </a>
                 </li>

@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "@components/layout/Header"
 import SocialDrawer from "@components/social/SocialDrawer"
 import ThemeSelector from "@components/theme/ThemeSelector"
+import ThemeProvider from "@components/theme/ThemeProvider"
 import "@styles/main.scss"
 
 const Layout = ({ children }) => {
@@ -37,13 +38,21 @@ const Layout = ({ children }) => {
 
     return (
         <>
-            <Header siteTitle={data.site.siteMetadata.title} />
-            <div>
-                <main id="main">{children}</main>
-                <footer></footer>
-                <SocialDrawer />
-                <ThemeSelector />
-            </div>
+            <ThemeProvider>
+                {({ theme }) => {
+                    const currentTheme = `theme--${theme}`
+
+                    return (
+                        <div className={`theme ${currentTheme}`}>
+                            <Header siteTitle={data.site.siteMetadata.title} />
+                            <main id="main">{children}</main>
+                            <footer></footer>
+                            <SocialDrawer />
+                            <ThemeSelector />
+                        </div>
+                    )
+                }}
+            </ThemeProvider>
         </>
     )
 }

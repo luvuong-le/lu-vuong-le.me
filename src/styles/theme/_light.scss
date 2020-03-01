@@ -1,0 +1,108 @@
+.theme--light {
+    color: $light-primary-color;
+    
+    #{$section}__header {
+        background: $light-background-color;
+
+        & h1::after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 45%;
+            height: 2px;
+            margin: 0 0 0 1rem;
+            background: $light-background-color;
+
+            transition: width 1s ease;
+        }
+
+        &--break::after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 45%;
+            height: 2px;
+            background: $dark-background-color;
+            transition: width 1s ease;
+        }
+    }
+
+    #{$btn} {
+        &--primary {
+            border: 5px solid $light-tertiary-color;
+            font-weight: bold;
+            background: $light-primary-color;
+            color: $light-secondary-color;
+        }
+    }
+
+    #{$nav} {
+        background: $light-background-color;
+        color: $light-primary-color;
+
+        &__logo {
+            & a {
+                color: $light-primary-color;
+                border: 3px solid $light-tertiary-color;
+            }
+        }
+
+        &__list {
+            &--sidebar {
+                color: $light-primary-color;
+            }
+        }
+
+        &__item {
+            & a {
+                color: $light-secondary-color;
+
+                @include breakpoint(desktop) {
+                    color: $light-primary-color;
+                }
+            }
+        }
+
+        &__hamburger {
+            & > span {
+                background: $light-primary-color;
+            }
+        }
+
+        &__sidebar {
+            color: $light-secondary-color;
+        }
+    }
+
+    #{$drawer} {
+        background: $dark-background-color;
+
+        &__toggle {
+            color: $light-secondary-color;
+            
+            & img {
+                border: 1.5px solid $light-secondary-color;
+            }
+        }
+
+        &__content {
+            & li {
+                border: 1.5px solid $light-secondary-color;
+            }
+        }
+    }
+
+    #{$landing} {
+        &__header {
+            & h2 {
+                color: $light-tertiary-color;
+            }
+        }
+
+        &__content {
+            & h2 {
+                color: $light-tertiary-color;
+            }
+        }
+    }
+}

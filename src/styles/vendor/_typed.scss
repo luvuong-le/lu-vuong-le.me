@@ -3,9 +3,17 @@
     
     & span {
         font-weight: bold;
+
+        @include breakpoint(desktop) {
+            font-size: 6rem;
+        }
     }   
 }
 
 .typed-cursor {
-    font-size: 2rem;
+    font-size: $lg-font-size;
+
+    @include breakpoint(desktop) {
+        font-size: 6rem;
+    }
 }

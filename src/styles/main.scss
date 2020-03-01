@@ -3,7 +3,7 @@ Fonts
 ******/
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Megrim&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Oxanium|Exo+2|Rubik&display=swap');
 
 /*****
 Abstract
@@ -22,6 +22,7 @@ Base
 Components
 ******/
 @import "components/btn";
+@import "components/container";
 @import "components/nav";
 @import "components/section";
 @import "components/scrollbar";

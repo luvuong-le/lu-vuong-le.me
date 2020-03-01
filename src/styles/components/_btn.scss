@@ -1,6 +1,6 @@
 .btn {
     padding: $btn-padding;
-    // font-family: $primary-font;
+    font-family: $primary-font-family;
     font-size: 1rem;
     border-radius: 3px;
     text-align: center;
@@ -10,8 +10,10 @@
     &--primary {
         border: 0;
         font-weight: bold;
-        // background: $tertiary;
-        // color: $primary-font;
+        
+        @include breakpoint(desktop) {
+            font-size: 1.6rem;
+        }
     }
 
     &--secondary {

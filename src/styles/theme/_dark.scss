@@ -1,1 +1,38 @@
+.theme--dark {
+    color: $dark-primary-color;
     
+    #{$section}__header {
+        background: $dark-background-color;
+
+        & h1::after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 45%;
+            height: 2px;
+            margin: 0 0 0 1rem;
+            background: $dark-background-color;
+
+            transition: width 1s ease;
+        }
+
+        &--break::after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 45%;
+            height: 2px;
+            background: $dark-background-color;
+            transition: width 1s ease;
+        }
+    }
+
+    #{$btn} {
+        &--primary {
+            border: 0;
+            font-weight: bold;
+            background: $dark-primary-color;
+            color: $dark-secondary-color;
+        }
+    }
+}

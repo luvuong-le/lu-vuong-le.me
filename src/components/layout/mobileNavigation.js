@@ -1,5 +1,4 @@
 import React from "react"
-import ResumePDF from "@assets/docs/Resume.pdf"
 
 export default function MobileNavigation() {
     const sidebarNav = React.createRef()
@@ -22,7 +21,9 @@ export default function MobileNavigation() {
     return (
         <nav className="nav nav--mobile">
             <div className="nav__logo anim--fadeInRight">
-                <span className="nav__logo-text">Lu-Vuong Le</span>
+                <a href="#sectionLanding">
+                    <span className="nav__logo-text">Lu-Vuong Le</span>
+                </a>
             </div>
             <div
                 className="nav__hamburger"
@@ -52,7 +53,7 @@ export default function MobileNavigation() {
                         <a href="#sectionContact">Get In Touch</a>
                     </li>
                     <li className="nav__item nav__item--sidebar">
-                        <a href={ResumePDF} download>
+                        <a href={"#"} download>
                             Resume
                         </a>
                     </li>

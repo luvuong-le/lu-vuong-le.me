@@ -18,9 +18,6 @@
             width: 45%;
             height: 2px;
             margin: 0 0 0 1rem;
-
-            // background: $primary-font;
-
             transition: width 1s ease;
         }
 
@@ -30,19 +27,13 @@
             vertical-align: middle;
             width: 45%;
             height: 2px;
-            // background: $primary-font;
-
             transition: width 1s ease;
         }
     }
 
-    &--primary-blue {
-        // background: $primary-background;
-        color: #ffffff;
-    }
-
-    &--white {
-        background: #ffffff;
-        // color: $primary-background;
+    &__landing {
+        @include breakpoint(desktop) {
+            display: flex;
+        }
     }
 }

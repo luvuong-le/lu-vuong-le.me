@@ -1,18 +1,35 @@
-/* Colors - Light Theme (Default) */
-$light-primary-color: ffffff;
-$light-secondary-color: #13315C;
-$light-tertiary-color: #13315C;
-$light-primary-font-color: #13315C;
+/* Background Colors - Light Theme (Default) */
+$light-background-color: #ffffff;
 
-/* Colors - Dark Theme (Option 1) */ 
+/* Background Colors - Dark Theme */
+$dark-background-color: #13315C;
+
+/* Font Colors - Light Theme (Default) */
+$light-primary-color: #13315C;
+$light-secondary-color: #ffffff;
+$light-tertiary-color: #457B9D;
+
+/* Font Colors - Dark Theme (Option 1) */ 
 $dark-primary-color: #13315C;
 $dark-secondary-color: #ffffff;
 $dark-tertiary-color: #4285F4;
-$dark-primary-font-color: #ffffff;
 
 /* Fonts */
-$primary-font-family: 'Noto Sans', sans-serif;
+$primary-font-family: 'Poppins', sans-serif;
 $primary-font-size-lrg: 2.5rem;
+$secondary-font-family: 'Noto Sans', sans-serif;
+
+/* Font  Sizes */
+$lg-font-size: 3rem;
+$md-font-size: 2rem;
+$sm-font-size: 1rem;
 
 /* Padding */
-$btn-padding: 1rem;
+$btn-padding: 1.5rem 1rem;
+
+/* Section / Theme Specific */
+$section: ".section";
+$landing: ".landing";
+$btn: ".btn";
+$nav: ".nav";
+$drawer: ".drawer";

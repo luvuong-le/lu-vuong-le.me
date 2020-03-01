@@ -1,8 +1,8 @@
 import PropTypes from "prop-types"
 import React from "react"
 
-import Navigation from "@components/layout/navigation"
-import MobileNavigation from "@components/layout/mobileNavigation"
+import Navigation from "@components/layout/Navigation"
+import MobileNavigation from "@components/layout/MobileNavigation"
 
 const Header = ({ siteTitle }) => (
     <header>
