@@ -1,5 +1,5 @@
 import React from "react"
-import Container from "@components/layout/container"
+import Container from "@components/layout/Container"
 
 import ProfileImage from "@assets/images/profile.jpg"
 import MentorSVG from "@assets/images/undraw_professor_8lrt.svg"
@@ -13,7 +13,7 @@ export default function About() {
         >
             <Container>
                 <div className="about">
-                    <div className="about section__header">
+                    <div className="section__header">
                         <h1>About Me</h1>
                     </div>
                     <div className="section section__content">

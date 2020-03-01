@@ -1,4 +1,5 @@
 import React from "react"
+import ResumePDF from "@assets/docs/Resume.pdf"
 
 export default function Navigation() {
     return (
@@ -7,11 +8,20 @@ export default function Navigation() {
                 <span className="nav__logo-text">Lu-Vuong Le</span>
             </div>
             <ul className="nav__list">
-                <li className="nav__item">About</li>
-                <li className="nav__item">Experience</li>
-                <li className="nav__item">Work</li>
-                <li className="nav__item">Contact</li>
-                <li className="nav__item">Resume</li>
+                <li className="nav__item">
+                    <a href="#sectionAbout">About</a>
+                </li>
+                <li className="nav__item">
+                    <a href="#sectionProjects">Work</a>
+                </li>
+                <li className="nav__item">
+                    <a href="#sectionContact">Contact</a>
+                </li>
+                <li className="nav__item btn btn--primary">
+                    <a href={ResumePDF} download>
+                        Resume
+                    </a>
+                </li>
             </ul>
         </nav>
     )

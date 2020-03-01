@@ -16,7 +16,7 @@
 
         @include breakpoint(phone) {
             & h2 {
-                color: $secondary;
+                // color: $secondary;
             }
 
             & p {

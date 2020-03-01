@@ -1,4 +1,5 @@
 import React from "react"
+import ResumePDF from "@assets/docs/Resume.pdf"
 
 export default function MobileNavigation() {
     const sidebarNav = React.createRef()
@@ -41,11 +42,20 @@ export default function MobileNavigation() {
                 ref={sidebarNav}
             >
                 <ul className="nav__list nav__list--sidebar">
-                    <li className="nav__item nav__item--sidebar">About</li>
-                    <li className="nav__item nav__item--sidebar">Experience</li>
-                    <li className="nav__item nav__item--sidebar">Work</li>
-                    <li className="nav__item nav__item--sidebar">Contact</li>
-                    <li className="nav__item nav__item--sidebar">Resume</li>
+                    <li className="nav__item nav__item--sidebar">
+                        <a href="#sectionAbout">About</a>
+                    </li>
+                    <li className="nav__item nav__item--sidebar">
+                        <a href="#sectionProjects">Work</a>
+                    </li>
+                    <li className="nav__item nav__item--sidebar">
+                        <a href="#sectionContact">Get In Touch</a>
+                    </li>
+                    <li className="nav__item nav__item--sidebar">
+                        <a href={ResumePDF} download>
+                            Resume
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>

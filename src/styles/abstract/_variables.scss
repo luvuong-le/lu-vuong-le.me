@@ -1,8 +1,18 @@
-$primary-background: #13315C;
-$secondary: #8DA9C4;
-$tertiary: #4285F4;
+/* Colors - Light Theme (Default) */
+$light-primary-color: ffffff;
+$light-secondary-color: #13315C;
+$light-tertiary-color: #13315C;
+$light-primary-font-color: #13315C;
 
-$primary-font: 'Noto Sans', sans-serif;
+/* Colors - Dark Theme (Option 1) */ 
+$dark-primary-color: #13315C;
+$dark-secondary-color: #ffffff;
+$dark-tertiary-color: #4285F4;
+$dark-primary-font-color: #ffffff;
+
+/* Fonts */
+$primary-font-family: 'Noto Sans', sans-serif;
 $primary-font-size-lrg: 2.5rem;
 
+/* Padding */
 $btn-padding: 1rem;

@@ -9,9 +9,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "@components/layout/header"
-import FooterNavDrawer from "@components/layout/footerNavDrawer"
-import "@styles/base/_base.scss"
+import Header from "@components/layout/Header"
+import SocialDrawer from "@components/social/SocialDrawer"
+import ThemeSelector from "@components/theme/ThemeSelector"
+import "@styles/main.scss"
 
 const Layout = ({ children }) => {
     const data = useStaticQuery(graphql`
@@ -24,13 +25,24 @@ const Layout = ({ children }) => {
         }
     `)
 
+    /** Bring in Smooth Scroll Library */
+    if (typeof window !== "undefined") {
+        // eslint-disable-next-line global-require
+        require("smooth-scroll")('a[href*="#"]', {
+            offset: function(anchor, toggle) {
+                return 85
+            },
+        })
+    }
+
     return (
         <>
             <Header siteTitle={data.site.siteMetadata.title} />
             <div>
                 <main id="main">{children}</main>
                 <footer></footer>
-                <FooterNavDrawer />
+                <SocialDrawer />
+                <ThemeSelector />
             </div>
         </>
     )

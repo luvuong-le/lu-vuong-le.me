@@ -1,14 +1,17 @@
 .btn {
     padding: $btn-padding;
-    font-family: $primary-font;
+    // font-family: $primary-font;
     font-size: 1rem;
     border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
 
     &--primary {
         border: 0;
         font-weight: bold;
-        background: $tertiary;
-        color: #ffffff;
+        // background: $tertiary;
+        // color: $primary-font;
     }
 
     &--secondary {

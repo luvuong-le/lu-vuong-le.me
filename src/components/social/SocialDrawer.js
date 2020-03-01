@@ -6,7 +6,7 @@ import LinkedInIcon from "@assets/icons/iconmonstr-linkedin-1.svg"
 import TwitterIcon from "@assets/icons/iconmonstr-twitter-1.svg"
 import GithubIcon from "@assets/icons/iconmonstr-github-1.svg"
 
-export default function FooterNavDrawer() {
+export default function SocialDrawer() {
     const toggleBtn = React.createRef()
     const drawerParent = React.createRef()
     const drawerEl = React.createRef()
@@ -36,13 +36,31 @@ export default function FooterNavDrawer() {
                 ref={drawerEl}
             >
                 <li>
-                    <img src={LinkedInIcon} alt="Social" />
+                    <a
+                        href="https://www.linkedin.com/in/lu-vuongle/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img src={LinkedInIcon} alt="LinkedIn" />
+                    </a>
                 </li>
                 <li>
-                    <img src={TwitterIcon} alt="Social" />
+                    <a
+                        href="https://twitter.com/luvuongle"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img src={TwitterIcon} alt="Twitter" />
+                    </a>
                 </li>
                 <li>
-                    <img src={GithubIcon} alt="Social" />
+                    <a
+                        href="https://github.com/luvuong-le"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img src={GithubIcon} alt="Github" />
+                    </a>
                 </li>
             </ul>
             <div

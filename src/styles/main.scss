@@ -1,0 +1,45 @@
+/*****
+Fonts
+******/
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Megrim&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Quicksand&display=swap');
+
+/*****
+Abstract
+******/
+@import "abstract/variables";
+@import "abstract/mixins";
+@import "abstract/utils";
+@import "abstract/animations";
+
+/*****
+Base
+******/
+@import "base/base";
+
+/*****
+Components
+******/
+@import "components/btn";
+@import "components/nav";
+@import "components/section";
+@import "components/scrollbar";
+@import "components/footerDrawer";
+
+/*****
+Page Specific Styles
+******/
+@import "pages/landing";
+@import "pages/about";
+
+/*****
+Themes
+******/
+@import "theme/dark";
+@import "theme/light";
+
+/*****
+Vendor / Third Party Custom Styles
+******/
+@import "vendor/typed";

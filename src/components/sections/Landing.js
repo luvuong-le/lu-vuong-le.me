@@ -1,7 +1,8 @@
 import React from "react"
-import Container from "@components/layout/container"
+import Container from "@components/layout/Container"
 
 import LandingImage from "@assets/images/undraw-coding.svg"
+import ResumePDF from "@assets/docs/Resume.pdf"
 
 export default function Landing({ typedEl }) {
     return (
@@ -61,10 +62,7 @@ export default function Landing({ typedEl }) {
                             <span className="fsize-m fweight-b color--white">
                                 {"> "}
                             </span>
-                            <span
-                                className="color--tertiary fsize-m"
-                                ref={typedEl}
-                            ></span>
+                            <span className=" fsize-m" ref={typedEl}></span>
                         </div>
                     </div>
                     <div className="landing__body">
@@ -76,9 +74,12 @@ export default function Landing({ typedEl }) {
                                     building stable web based technical
                                     solutions to solve business problems
                                 </p>
-                                <button className="btn btn--primary btn--block margin-t-md">
+                                <a
+                                    href="#sectionContact"
+                                    className="btn btn--primary btn--block margin-t-md"
+                                >
                                     Get In Touch!
-                                </button>
+                                </a>
                             </div>
                             <div className="flex flex-column margin-l-md">
                                 <p>
@@ -86,9 +87,13 @@ export default function Landing({ typedEl }) {
                                     in the modern web space and learning about
                                     new technologies
                                 </p>
-                                <button className="btn btn--primary btn--block margin-t-md">
+                                <a
+                                    href={ResumePDF}
+                                    className="btn btn--primary btn--block margin-t-md"
+                                    download
+                                >
                                     View My Resume
-                                </button>
+                                </a>
                             </div>
                         </div>
                         <div className="landing__img">

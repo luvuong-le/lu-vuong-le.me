@@ -1,9 +1,16 @@
 .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+
     display: flex;
     align-items: center;
     
-    background: #13315C;
-    color: #ffffff;
+    width: 100%;
+    z-index: 150;
+    
+    // background: $primary-background;
+    // color: $primary-font;
     padding: 3rem 10rem;
 
     @include breakpoint(phone) {
@@ -31,8 +38,7 @@
         list-style: none;
 
         &--sidebar {
-            color: #ffffff;
-
+            // color: $primary-font;
             flex-flow: column;
         }
     }
@@ -40,6 +46,11 @@
     &__item {
         font-weight: bold;
         margin: 0 3rem;
+
+        & a {
+            // color: $primary-font;
+            text-decoration: none;
+        }
 
         &--sidebar {
             margin: 1rem 0;
@@ -66,7 +77,7 @@
         align-items: center;
         justify-content: center;
         
-        color: $tertiary;
+        // color: $tertiary;
         background: rgba(0, 0, 0, 0.8);
 
         overflow: hidden;
@@ -86,7 +97,7 @@
             height: 3px;
             margin: 3px 0;
             width: 30px;
-            background: #ffffff; 
+            // background: $secondary; 
             transition: width .5s ease;
         }
 

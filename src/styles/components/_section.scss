@@ -1,6 +1,10 @@
 .section {
     height: 100vh;
-    padding: 0 0 2rem 0;
+    padding: 0 0 1.5rem 0;
+
+    &:first-child {
+        margin-top: 11rem;
+    }
 
     @include breakpoint(phone) {
         height: 100%;
@@ -14,19 +18,31 @@
             width: 45%;
             height: 2px;
             margin: 0 0 0 1rem;
-            background: #ffffff;
+
+            // background: $primary-font;
+
+            transition: width 1s ease;
+        }
+
+        &--break::after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 45%;
+            height: 2px;
+            // background: $primary-font;
 
             transition: width 1s ease;
         }
     }
 
     &--primary-blue {
-        background: $primary-background;
+        // background: $primary-background;
         color: #ffffff;
     }
 
     &--white {
         background: #ffffff;
-        color: $primary-background;
+        // color: $primary-background;
     }
 }

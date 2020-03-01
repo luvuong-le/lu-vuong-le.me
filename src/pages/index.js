@@ -1,12 +1,15 @@
 import React, { useEffect } from "react"
 
-import Layout from "@components/layout/layout"
-import SEO from "@components/seo/seo"
+import Layout from "@components/layout/Layout"
+import SEO from "@components/seo/Seo"
 
 // Sections
-import Landing from "@sections/landing"
-import About from "@sections/about"
+import Landing from "@components/sections/Landing"
+import About from "@components/sections/About"
+import Projects from "@components/sections/Projects"
+import Contact from "@components/sections/Contact"
 
+// Third Party
 import Typed from "typed.js"
 
 const IndexPage = () => {
@@ -33,6 +36,8 @@ const IndexPage = () => {
             {/* Sections */}
             <Landing typedEl={typedEl} />
             <About />
+            <Projects />
+            <Contact />
         </Layout>
     )
 }
