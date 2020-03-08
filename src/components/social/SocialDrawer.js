@@ -37,7 +37,7 @@ export default function SocialDrawer() {
                         rel="noopener noreferrer"
                     >
                         <img
-                            src={`${process.env.CLOUDFRONT_CDN_URL}/assets/icons/iconmonstr-linkedin-1.svg`}
+                            src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/icons/iconmonstr-linkedin-1.svg`}
                             alt="LinkedIn"
                         />
                     </a>
@@ -49,7 +49,7 @@ export default function SocialDrawer() {
                         rel="noopener noreferrer"
                     >
                         <img
-                            src={`${process.env.CLOUDFRONT_CDN_URL}/assets/icons/iconmonstr-twitter-1.svg`}
+                            src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/icons/iconmonstr-twitter-1.svg`}
                             alt="Twitter"
                         />
                     </a>
@@ -61,7 +61,7 @@ export default function SocialDrawer() {
                         rel="noopener noreferrer"
                     >
                         <img
-                            src={`${process.env.CLOUDFRONT_CDN_URL}/assets/icons/iconmonstr-github-1.svg`}
+                            src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/icons/iconmonstr-github-1.svg`}
                             alt="Github"
                         />
                     </a>
@@ -75,7 +75,7 @@ export default function SocialDrawer() {
                 tabIndex="0"
             >
                 <img
-                    src={`${process.env.CLOUDFRONT_CDN_URL}/assets/icons/iconmonstr-share-4.svg`}
+                    src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/icons/iconmonstr-share-4.svg`}
                     ref={toggleBtn}
                     alt="Social"
                 />

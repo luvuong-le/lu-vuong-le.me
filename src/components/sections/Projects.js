@@ -26,7 +26,7 @@ export default function Projects() {
                         <div className="section__content margin-t-md">
                             <div className="featured featured__project">
                                 <img
-                                    src={`${process.env.CLOUDFRONT_CDN_URL}/assets/images/undraw_trendy_interface_lg8x.svg`}
+                                    src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/images/undraw_trendy_interface_lg8x.svg`}
                                     alt="Designer"
                                 />
                                 <div className="featured__content">
@@ -141,7 +141,7 @@ export default function Projects() {
                                     </div>
                                 </div>
                                 <img
-                                    src={`${process.env.CLOUDFRONT_CDN_URL}/assets/images/undraw_trendy_interface_lg8x.svg`}
+                                    src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/images/undraw_trendy_interface_lg8x.svg`}
                                     alt="Designer"
                                 />
                             </div>

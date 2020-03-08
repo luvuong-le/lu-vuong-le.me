@@ -42,7 +42,7 @@ export default function Navigation() {
                     <li className="nav__item">
                         <a
                             className="nav__link"
-                            href={`${process.env.CLOUDFRONT_CDN_URL}/assets/docs/Resume.pdf`}
+                            href={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/docs/Resume.pdf`}
                             download
                         >
                             <i className="fas fa-file"></i>

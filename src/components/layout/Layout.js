@@ -17,7 +17,7 @@ import ThemeProvider from "@components/theme/ThemeProvider"
 import "@styles/main.scss"
 
 const Layout = ({ children }) => {
-    console.log(process.env.CLOUDFRONT_CDN_URL)
+    console.log(process.env.GATSBY_CLOUDFRONT_CDN_URL)
 
     useEffect(() => {
         /** Bring in Smooth Scroll Library */

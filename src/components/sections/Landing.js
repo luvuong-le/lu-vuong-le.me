@@ -105,7 +105,7 @@ export default function Landing({ typedEl }) {
                         </div>
                         <div className="landing__img anim--fadeInRight">
                             <img
-                                src={`${process.env.CLOUDFRONT_CDN_URL}/assets/images/undraw-coding.svg`}
+                                src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/images/undraw-coding.svg`}
                                 alt="Undraw Coding"
                             />
                         </div>

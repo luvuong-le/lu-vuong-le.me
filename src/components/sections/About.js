@@ -17,7 +17,7 @@ export default function About() {
                         <div className="section__content">
                             <div className="about__block">
                                 <img
-                                    src={`${process.env.CLOUDFRONT_CDN_URL}/assets/images/undraw_trendy_interface_lg8x.svg`}
+                                    src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/images/undraw_trendy_interface_lg8x.svg`}
                                     alt="Designer"
                                 />
                                 <div className="about__block-content">
@@ -118,7 +118,7 @@ export default function About() {
                                     </div>
                                 </div>
                                 <img
-                                    src={`${process.env.CLOUDFRONT_CDN_URL}/assets/images/undraw_professor_8lrt.svg`}
+                                    src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/images/undraw_professor_8lrt.svg`}
                                     alt="Mentor / Professor"
                                 />
                             </div>
