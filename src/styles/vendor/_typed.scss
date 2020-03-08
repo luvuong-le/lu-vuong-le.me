@@ -3,6 +3,7 @@
     
     & span {
         font-weight: bold;
+        font-family: 'SF UI Display Heavy';
 
         @include breakpoint(desktop) {
             font-size: 6rem;

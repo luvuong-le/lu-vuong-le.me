@@ -1,0 +1,16 @@
+.tag {
+    &__container {
+        display: flex;
+        flex-wrap: wrap;  
+
+        margin: 3rem 0;
+
+        &--right {
+            justify-content: flex-end;
+        }
+
+        &--left {
+            justify-content: flex-start;
+        }
+    }
+}

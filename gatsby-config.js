@@ -7,10 +7,9 @@ module.exports = {
     plugins: [
         `gatsby-plugin-react-helmet`,
         {
-            resolve: `gatsby-source-filesystem`,
+            resolve: "gatsby-plugin-load-script",
             options: {
-                name: `images`,
-                path: `${__dirname}/src/assets/images`,
+                src: "https://kit.fontawesome.com/116ecaa9e7.js",
             },
         },
         `gatsby-transformer-sharp`,
@@ -37,7 +36,7 @@ module.exports = {
                     "@components": `src/components`,
                     "@assets": `src/assets`,
                 },
-                },
+            },
         },
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline

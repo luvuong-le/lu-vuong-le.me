@@ -1,60 +1,131 @@
 import React from "react"
 import Container from "@components/layout/Container"
 
-import ProfileImage from "@assets/images/profile.jpg"
-import MentorSVG from "@assets/images/undraw_professor_8lrt.svg"
-import DesignerSVG from "@assets/images/undraw_trendy_interface_lg8x.svg"
+import Tag from "@components/tags/Tag.js"
+import Fade from "react-reveal/Fade"
 
 export default function About() {
     return (
-        <section
-            id="sectionAbout"
-            className="section section--primary-blue section__about"
-        >
-            <Container>
-                <div className="about">
-                    <div className="section__header">
-                        <h1>About Me</h1>
-                    </div>
-                    <div className="section section__content">
-                        <div className="about__block">
-                            <div className="about__block--profile">
-                                <img src={ProfileImage} alt="Profile" />
+        <Fade>
+            <section
+                id="sectionAbout"
+                className="section section--grey margin-t-lg section__about"
+                data-name="About"
+            >
+                <Container>
+                    <div className="about">
+                        <div className="section__content">
+                            <div className="about__block">
+                                <img
+                                    src={`${process.env.CLOUDFRONT_CDN_URL}/assets/images/undraw_trendy_interface_lg8x.svg`}
+                                    alt="Designer"
+                                />
+                                <div className="about__block-content">
+                                    <div className="section__header--break">
+                                        <h1 className="section__header-text anim--fadeInDown">
+                                            Designer
+                                        </h1>
+                                    </div>
+                                    <p className="margin-t-lg anim--fadeInDown">
+                                        Skilled at design systems, UI design and
+                                        designing interfaces between different
+                                        components. Although not many developers
+                                        are geared towards design, I personally
+                                        love to design my projects with tools
+                                        like Figma, Adobe XD and code up a
+                                        beautiful design with CSS. I am
+                                        committed into creating usable but also
+                                        creative UI designs.
+                                    </p>
+                                    <div className="tag__container tag__container--right">
+                                        <Tag
+                                            name="Figma"
+                                            style={{
+                                                background: "blue",
+                                                color: "#ffffff",
+                                            }}
+                                        />
+                                        <Tag
+                                            name="Abode XD"
+                                            style={{
+                                                background: "blue",
+                                                color: "#ffffff",
+                                            }}
+                                        />
+                                        <Tag
+                                            name="Draw IO"
+                                            style={{
+                                                background: "blue",
+                                                color: "#ffffff",
+                                            }}
+                                        />
+                                        <Tag
+                                            name="Photoshop"
+                                            style={{
+                                                background: "blue",
+                                                color: "#ffffff",
+                                            }}
+                                        />
+                                    </div>
+                                </div>
                             </div>
-                            <h2 className="margin-t-md">{"</Me>"}</h2>
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Ipsam non adipisci odio
-                                ducimus consequuntur eligendi doloremque ut
-                                numquam quia vitae. Velit non dicta magni est,
-                                nemo dolore adipisci cupiditate nobis?
-                            </p>
-                        </div>
-                        <div className="about__block">
-                            <img src={DesignerSVG} alt="Designer" />
-                            <h2>Designer</h2>
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Ipsam non adipisci odio
-                                ducimus consequuntur eligendi doloremque ut
-                                numquam quia vitae. Velit non dicta magni est,
-                                nemo dolore adipisci cupiditate nobis?
-                            </p>
-                        </div>
-                        <div className="about__block">
-                            <img src={MentorSVG} alt="Mentor / Professor" />
-                            <h2>Mentor</h2>
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Ipsam non adipisci odio
-                                ducimus consequuntur eligendi doloremque ut
-                                numquam quia vitae. Velit non dicta magni est,
-                                nemo dolore adipisci cupiditate nobis?
-                            </p>
+                            <div className="about__block">
+                                <div className="about__block-content">
+                                    <div className="section__header--break">
+                                        <h1 className="section__header-text">
+                                            Mentor
+                                        </h1>
+                                    </div>
+                                    <p className="margin-t-lg anim--fadeInDown">
+                                        I believe teaching is one of the best
+                                        ways to share knowledge and solidify
+                                        your own knowledge at the same time. As
+                                        a volunteer at CoderDojo, I enjoy
+                                        teaching others knowledge that I already
+                                        have. It is always a pleasure for me as
+                                        sometimes I learn things I didn't know
+                                        either.
+                                    </p>
+                                    <div className="tag__container tag__container--left">
+                                        <Tag
+                                            name="Figma"
+                                            style={{
+                                                background: "blue",
+                                                color: "#ffffff",
+                                            }}
+                                        />
+                                        <Tag
+                                            name="Abode XD"
+                                            style={{
+                                                background: "blue",
+                                                color: "#ffffff",
+                                            }}
+                                        />
+                                        <Tag
+                                            name="Draw IO"
+                                            style={{
+                                                background: "blue",
+                                                color: "#ffffff",
+                                            }}
+                                        />
+                                        <Tag
+                                            name="Photoshop"
+                                            style={{
+                                                background: "blue",
+                                                color: "#ffffff",
+                                            }}
+                                        />
+                                    </div>
+                                </div>
+                                <img
+                                    src={`${process.env.CLOUDFRONT_CDN_URL}/assets/images/undraw_professor_8lrt.svg`}
+                                    alt="Mentor / Professor"
+                                />
+                            </div>
                         </div>
                     </div>
-                </div>
-            </Container>
-        </section>
+                </Container>
+            </section>
+        </Fade>
     )
 }

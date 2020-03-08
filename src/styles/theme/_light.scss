@@ -1,6 +1,7 @@
 .theme--light {
     color: $light-primary-color;
     
+    /* Section - Light Theme Styles */
     #{$section}__header {
         background: $light-background-color;
 
@@ -20,16 +21,22 @@
             content: "";
             display: inline-block;
             vertical-align: middle;
-            width: 45%;
+            width: 20%;
             height: 2px;
             background: $dark-background-color;
             transition: width 1s ease;
         }
     }
 
+    #{$section} {
+        &--primary-blue {
+            // background: $dark-background-color;
+        }
+    }
+
     #{$btn} {
         &--primary {
-            border: 5px solid $light-tertiary-color;
+            // border: 5px solid $light-tertiary-color;
             font-weight: bold;
             background: $light-primary-color;
             color: $light-secondary-color;
@@ -37,40 +44,20 @@
     }
 
     #{$nav} {
-        background: $light-background-color;
+        background: $dark-background-color;
         color: $light-primary-color;
 
         &__logo {
             & a {
-                color: $light-primary-color;
+                color: $light-secondary-color;
                 border: 3px solid $light-tertiary-color;
-            }
-        }
-
-        &__list {
-            &--sidebar {
-                color: $light-primary-color;
             }
         }
 
         &__item {
             & a {
                 color: $light-secondary-color;
-
-                @include breakpoint(desktop) {
-                    color: $light-primary-color;
-                }
             }
-        }
-
-        &__hamburger {
-            & > span {
-                background: $light-primary-color;
-            }
-        }
-
-        &__sidebar {
-            color: $light-secondary-color;
         }
     }
 

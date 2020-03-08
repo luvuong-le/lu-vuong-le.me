@@ -3,11 +3,12 @@ Fonts
 ******/
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Megrim&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Oxanium|Exo+2|Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Oxanium|Roboto|Exo+2|Rubik&display=swap');
 
 /*****
 Abstract
 ******/
+@import "abstract/fonts";
 @import "abstract/variables";
 @import "abstract/mixins";
 @import "abstract/utils";
@@ -25,8 +26,10 @@ Components
 @import "components/container";
 @import "components/nav";
 @import "components/section";
+@import "components/project";
 @import "components/scrollbar";
 @import "components/footerDrawer";
+@import "components/tag";
 
 /*****
 Page Specific Styles

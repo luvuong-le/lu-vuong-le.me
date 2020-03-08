@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
 
 import Layout from "@components/layout/Layout"
-import SEO from "@components/seo/Seo"
 
 // Sections
 import Landing from "@components/sections/Landing"
@@ -17,7 +16,7 @@ const IndexPage = () => {
 
     useEffect(() => {
         const typedJSOptions = {
-            strings: ["Software Engineer.", "Mentor.", "Designer."],
+            strings: ["SW Engineer.", "Mentor.", "Designer."],
             typeSpeed: 100,
             loop: true,
         }
@@ -31,8 +30,6 @@ const IndexPage = () => {
 
     return (
         <Layout>
-            <SEO title="Home" />
-
             {/* Sections */}
             <Landing typedEl={typedEl} />
             <About />

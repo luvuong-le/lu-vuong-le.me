@@ -22,8 +22,17 @@ img {
     width: 100%;
 }
 
+main {
+    margin-left: 8rem;
+    transition: 200ms ease;
+}
+
 @include breakpoint(phone) {
     p {
         font-size: 1.2rem;
+    }
+
+    main {
+        margin: 0;
     }
 }

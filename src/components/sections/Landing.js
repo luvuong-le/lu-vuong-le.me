@@ -1,60 +1,66 @@
 import React from "react"
 import Container from "@components/layout/Container"
 
-import LandingImage from "@assets/images/undraw-coding.svg"
+import SEO from "@components/seo/Seo"
+
+import Fade from "react-reveal/Fade"
 
 export default function Landing({ typedEl }) {
     return (
         <section
             id="sectionLanding"
             className="section section__landing section--light"
+            data-name="Landing"
         >
+            <SEO title="Landing" />
             <Container>
                 <div className="landing">
                     <div className="landing__body">
                         <div className="landing__content">
-                            <h2 className="margin-b-sm anim--fadeInDown">
-                                Welcome!{" "}
-                                <span
-                                    className="anim anim--wave margin-l-sm"
-                                    role="img"
-                                    aria-label="jsx-a11y/accessible-emoji"
-                                >
-                                    👋
-                                </span>
-                            </h2>
+                            <Fade top cascade>
+                                <h2 className="margin-b-sm anim--fadeInDown">
+                                    {"<Hello World />"}{" "}
+                                    <span
+                                        className="anim anim--wave margin-l-sm"
+                                        role="img"
+                                        aria-label="jsx-a11y/accessible-emoji"
+                                    >
+                                        👋
+                                    </span>
+                                </h2>
+                            </Fade>
                             <h1 className="margin-t-sm anim--fadeInDown">
-                                <span className="anim--hover-rotate fsize-l">
+                                <span className="anim--float-up fsize-l">
                                     I
                                 </span>
-                                <span className="anim--hover-rotate fsize-l">
+                                <span className="anim--float-up fsize-l">
                                     '
                                 </span>
-                                <span className="anim--hover-rotate fsize-l">
+                                <span className="anim--float-up fsize-l">
                                     m
                                 </span>{" "}
-                                <span className="anim--hover-rotate fsize-l">
+                                <span className="anim--float-up fsize-l">
                                     L
                                 </span>
-                                <span className="anim--hover-rotate fsize-l">
+                                <span className="anim--float-up fsize-l">
                                     u
                                 </span>
-                                <span className="anim--hover-rotate fsize-l">
+                                <span className="anim--float-up fsize-l">
                                     -
                                 </span>
-                                <span className="anim--hover-rotate fsize-l">
+                                <span className="anim--float-up fsize-l">
                                     V
                                 </span>
-                                <span className="anim--hover-rotate fsize-l">
+                                <span className="anim--float-up fsize-l">
                                     u
                                 </span>
-                                <span className="anim--hover-rotate fsize-l">
+                                <span className="anim--float-up fsize-l">
                                     o
                                 </span>
-                                <span className="anim--hover-rotate fsize-l">
+                                <span className="anim--float-up fsize-l">
                                     n
                                 </span>
-                                <span className="anim--hover-rotate fsize-l">
+                                <span className="anim--float-up fsize-l">
                                     g
                                 </span>
                             </h1>
@@ -64,9 +70,9 @@ export default function Landing({ typedEl }) {
                                 </span>
                                 <span className="fsize-l" ref={typedEl}></span>
                             </div>
-                            <div className="flex margin-t-md">
+                            <div className="flex margin-t-lg">
                                 <div className="flex flex-column">
-                                    <p className="landing__text fweight-b">
+                                    <p className="landing__text fweight-b anim--fadeInDown">
                                         Software Engineer with a sound
                                         understanding of the SDLC, skilled in
                                         designing and building stable web based
@@ -75,19 +81,19 @@ export default function Landing({ typedEl }) {
                                     </p>
                                 </div>
                                 <div className="flex flex-column margin-l-md">
-                                    <p className="landing__text fweight-b">
+                                    <p className="landing__text fweight-b anim--fadeInDown">
                                         Passionate about creating software
                                         solutions in the modern web space and
                                         learning about new technologies
                                     </p>
                                 </div>
                             </div>
-                            <div className="landing__cta">
+                            <div className="landing__cta anim--fadeInDown">
                                 <a
                                     href="#sectionContact"
                                     className="btn btn--primary btn--block"
                                 >
-                                    Get In Touch!
+                                    Contact Me
                                 </a>
                                 <a
                                     href="#sectionContact"
@@ -97,8 +103,11 @@ export default function Landing({ typedEl }) {
                                 </a>
                             </div>
                         </div>
-                        <div className="landing__img">
-                            <img src={LandingImage} alt="Undraw Coding" />
+                        <div className="landing__img anim--fadeInRight">
+                            <img
+                                src={`${process.env.CLOUDFRONT_CDN_URL}/assets/images/undraw-coding.svg`}
+                                alt="Undraw Coding"
+                            />
                         </div>
                     </div>
                 </div>

@@ -9,9 +9,17 @@
         display: inline-block;
 
         &:hover {
-            // color: $tertiary;
             font-weight: bold;
             transform: rotate(360deg);
+            transition: all .5s cubic-bezier(0.25, 0.25, 0.5, 1.9);
+        }
+    }
+
+    &--float-up {
+        display: inline-block;
+
+        &:hover {
+            transform: translateY(-10px);
             transition: all .5s cubic-bezier(0.25, 0.25, 0.5, 1.9);
         }
     }
@@ -25,8 +33,19 @@
         transition: transform .5s ease;
         animation: fadeInRight .5s ease;
     }
+
+    &--fadeInLeft {
+        transition: transform .5s ease;
+        animation: fadeInLeft .5s ease;
+    }
+
+    &--slideLeft {
+        transition: transform .5s ease;
+        animation: slideLeft .5s ease;
+    }
 }
 
+/* Fade Effects */
 @keyframes fadeInDown {
     0% {
         opacity: 0;
@@ -49,6 +68,27 @@
     }
 }
 
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide Effects */
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% { 
+        transform: translateX(0%);
+    }
+}
+
 @keyframes wave {
     0% {
         transform: rotate(0deg);
@@ -56,27 +96,5 @@
         transform: rotate(35deg);
     } 100% {
         transform: rotate(0deg);
-    }
-}
-
-@keyframes navHamburgerSpanLoadHalf {
-    0% {
-        width: 0%;
-    }
-    50% {
-        width: 30px;
-    }
-    100% {
-        width: 15px;
-    }
-}
-
-
-@keyframes navHamburgerSpanLoadFull {
-    0% {
-        width: 0px;
-    }
-    100% {
-        width: 30px;
     }
 }

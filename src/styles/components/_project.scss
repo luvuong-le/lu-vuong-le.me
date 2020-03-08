@@ -1,0 +1,91 @@
+/* Featured Projects */
+.featured {
+    &__project {
+        @include breakpoint(desktop) { 
+            margin: 4rem 0;
+            display: flex;
+            align-items: center;
+
+            & img {
+                width: 50%;
+            }
+        }
+    }
+
+    &__content {
+        margin: 0 3rem;
+    }
+
+    &__desc {
+        @include breakpoint(desktop) {
+            padding: 2rem;
+            margin-top: 2rem;
+            background: $dark-background-color;
+            color: #ffffff;
+            box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.3);
+            border-radius: 3px;
+            width: 80%;
+        }
+    }
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Non Featured Project */
+.project {
+    @include breakpoint(desktop) {
+        margin: 2rem 2rem 2rem 0;
+        padding: 3rem;
+        background: $dark-background-color;
+        color: white;
+        border-radius: 3px;
+        width: 33%;
+        box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.3);
+    }
+
+    &__header {
+        margin: 0 0 4rem 0;
+
+        @include breakpoint(desktop) {
+            display: flex;
+        }
+
+        & i {
+            @include breakpoint(desktop) {
+                font-size: 2rem;
+                cursor: pointer;
+            }
+
+            &:not(:first-child) {
+                margin: 0 0 0 2rem;
+            }
+        }
+
+        & div {
+            @include breakpoint(desktop) {
+                flex: 1;
+            }
+        }
+    }
+
+    &__content {
+        margin: 4rem 0;
+
+        & h1 {
+            margin: 1rem 0;
+        }
+
+        & p {
+            margin-top: 2rem;
+            opacity: 0.7;
+        }
+    }
+
+    &__footer {
+        margin: 8rem 0 0 0;
+        opacity: 0.7;
+    }
+}

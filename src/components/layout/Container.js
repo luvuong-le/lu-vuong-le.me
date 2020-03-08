@@ -5,6 +5,8 @@ export default function Container({ styles, children }) {
     const containerStyles = css`
         padding: 0 4rem;
         margin: 4rem 0;
+        display: flex;
+        align-items: center;
 
         @media only screen and (min-width: 64em) {
             padding: 3rem 10rem;

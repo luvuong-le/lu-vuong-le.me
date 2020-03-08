@@ -1,11 +1,6 @@
 import React from "react"
 import { css } from "@emotion/core"
 
-import IconSocialShare from "@assets/icons/iconmonstr-share-4.svg"
-import LinkedInIcon from "@assets/icons/iconmonstr-linkedin-1.svg"
-import TwitterIcon from "@assets/icons/iconmonstr-twitter-1.svg"
-import GithubIcon from "@assets/icons/iconmonstr-github-1.svg"
-
 export default function SocialDrawer() {
     const toggleBtn = React.createRef()
     const drawerParent = React.createRef()
@@ -17,7 +12,7 @@ export default function SocialDrawer() {
         right: 2rem;
     `
 
-    const toggleDrawer = function() {
+    const toggleDrawer = () => {
         if (drawerEl.current.style.maxHeight) {
             drawerEl.current.style.maxHeight = null
             drawerEl.current.dataset.toggle = "hidden"
@@ -41,7 +36,10 @@ export default function SocialDrawer() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <img src={LinkedInIcon} alt="LinkedIn" />
+                        <img
+                            src={`${process.env.CLOUDFRONT_CDN_URL}/assets/icons/iconmonstr-linkedin-1.svg`}
+                            alt="LinkedIn"
+                        />
                     </a>
                 </li>
                 <li>
@@ -50,7 +48,10 @@ export default function SocialDrawer() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <img src={TwitterIcon} alt="Twitter" />
+                        <img
+                            src={`${process.env.CLOUDFRONT_CDN_URL}/assets/icons/iconmonstr-twitter-1.svg`}
+                            alt="Twitter"
+                        />
                     </a>
                 </li>
                 <li>
@@ -59,7 +60,10 @@ export default function SocialDrawer() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <img src={GithubIcon} alt="Github" />
+                        <img
+                            src={`${process.env.CLOUDFRONT_CDN_URL}/assets/icons/iconmonstr-github-1.svg`}
+                            alt="Github"
+                        />
                     </a>
                 </li>
             </ul>
@@ -70,7 +74,11 @@ export default function SocialDrawer() {
                 role="button"
                 tabIndex="0"
             >
-                <img src={IconSocialShare} ref={toggleBtn} alt="Social" />
+                <img
+                    src={`${process.env.CLOUDFRONT_CDN_URL}/assets/icons/iconmonstr-share-4.svg`}
+                    ref={toggleBtn}
+                    alt="Social"
+                />
             </div>
         </div>
     )
