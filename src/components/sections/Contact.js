@@ -7,7 +7,7 @@ export default function Contact() {
     return (
         <Fade>
             <section
-                id="sectionContact"
+                id="contact"
                 className="section contact"
                 data-name="Contact"
             >

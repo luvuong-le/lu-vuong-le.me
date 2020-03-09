@@ -8,7 +8,7 @@ export default function About() {
     return (
         <Fade>
             <section
-                id="sectionAbout"
+                id="about"
                 className="section section--grey margin-t-lg section__about"
                 data-name="About"
             >

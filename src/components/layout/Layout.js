@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
                 offset: function(anchor, toggle) {
                     return 0
                 },
-                updateURL: false,
+                updateURL: true,
                 emitEvents: true,
             })
         }
@@ -36,6 +36,14 @@ const Layout = ({ children }) => {
                 ? `${e.detail.anchor.dataset.name} | Lu-Vuong Le`
                 : null
         })
+
+        /** Scroll to Anchor Section if any */
+        const hash = window.location.hash
+
+        if (hash) {
+            const section = document.getElementById(hash.replace("#", ""))
+            section.scrollIntoView()
+        }
 
         return () => {}
     }, [])

@@ -8,7 +8,7 @@ export default function Navigation() {
             <Fade cascade>
                 <ul className="nav__list">
                     <li className="nav__item">
-                        <a href="#sectionLanding" className="nav__link">
+                        <a href="/" className="nav__link">
                             <i className="fas fa-angle-double-right"></i>
                             <span className="link-text nav__logo-text anim--fadeInRight">
                                 Lu-Vuong Le
@@ -16,7 +16,7 @@ export default function Navigation() {
                         </a>
                     </li>
                     <li className="nav__item">
-                        <a href="#sectionAbout" className="nav__link">
+                        <a href="/#about" className="nav__link">
                             <i className="fas fa-user"></i>
                             <span className="nav__link-text anim--fadeInRight">
                                 About
@@ -24,10 +24,7 @@ export default function Navigation() {
                         </a>
                     </li>
                     <li className="nav__item">
-                        <a
-                            href="#sectionFeaturedProjects"
-                            className="nav__link"
-                        >
+                        <a href="/#featured" className="nav__link">
                             <i className="fas fa-code-branch"></i>
                             <span className="nav__link-text anim--fadeInRight">
                                 Featured Projects
@@ -35,7 +32,7 @@ export default function Navigation() {
                         </a>
                     </li>
                     <li className="nav__item">
-                        <a href="#sectionOtherProjects" className="nav__link">
+                        <a href="/#projects" className="nav__link">
                             <i className="fas fa-folder-open"></i>
                             <span className="nav__link-text anim--fadeInRight">
                                 Other Projects
@@ -43,7 +40,15 @@ export default function Navigation() {
                         </a>
                     </li>
                     <li className="nav__item">
-                        <a href="#sectionContact" className="nav__link">
+                        <a href="/archive" className="nav__link">
+                            <i className="fas fa-archive"></i>
+                            <span className="nav__link-text anim--fadeInRight">
+                                Archive
+                            </span>
+                        </a>
+                    </li>
+                    <li className="nav__item">
+                        <a href="/#contact" className="nav__link">
                             <i className="fas fa-phone"></i>
                             <span className="nav__link-text anim--fadeInRight">
                                 Contact

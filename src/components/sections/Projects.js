@@ -10,7 +10,7 @@ export default function Projects() {
     return (
         <Fade>
             <section
-                id="sectionFeaturedProjects"
+                id="featured"
                 className="section projects"
                 data-name="Featured Projects"
             >
@@ -138,7 +138,7 @@ export default function Projects() {
                                                 <i className="fab fa-github"></i>
                                             </a>
                                             <a
-                                                href="#"
+                                                href="https://luvuong-le-snake-game.netlify.com/"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                             >
@@ -291,7 +291,7 @@ export default function Projects() {
                                                 <i className="fab fa-github"></i>
                                             </a>
                                             <a
-                                                href="#"
+                                                href="https://luvuong-le-game-of-life.netlify.com/"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                             >
@@ -437,7 +437,7 @@ export default function Projects() {
                                                 <i className="fab fa-github"></i>
                                             </a>
                                             <a
-                                                href="#"
+                                                href="https://luvuong-le-webcomponents.netlify.com/"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                             >
@@ -493,7 +493,7 @@ export default function Projects() {
             </section>
 
             <section
-                id="sectionOtherProjects"
+                id="projects"
                 className="section section--grey projects"
                 data-name="Other Projects"
             >
@@ -570,7 +570,7 @@ export default function Projects() {
                                             <i className="fab fa-github"></i>
                                         </a>
                                         <a
-                                            href="#"
+                                            href="https://luvuong-le-hangman.netlify.com/"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -692,7 +692,7 @@ export default function Projects() {
                                             <i className="fab fa-github"></i>
                                         </a>
                                         <a
-                                            href="#"
+                                            href="https://luvuong-le-tictactoe.netlify.com/"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -756,7 +756,7 @@ export default function Projects() {
                                             <i className="fab fa-github"></i>
                                         </a>
                                         <a
-                                            href="#"
+                                            href="https://luvuong-le-todolist.netlify.com/"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -819,7 +819,7 @@ export default function Projects() {
                                             <i className="fab fa-github"></i>
                                         </a>
                                         <a
-                                            href="#"
+                                            href="https://luvuong-le-memory-game.netlify.com/"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -876,7 +876,7 @@ export default function Projects() {
                                 >
                                     View My Github
                                 </a>
-                                <a href="#" className="btn btn--primary">
+                                <a href="/archive" className="btn btn--primary">
                                     View More In Archive
                                 </a>
                             </div>
