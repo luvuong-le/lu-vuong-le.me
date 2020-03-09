@@ -7,18 +7,16 @@
 
 import React, { useEffect } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
 import Navigation from "@components/layout/Navigation"
 import PageProgress from "@components/layout/PageProgress"
+import WebsiteStatus from "@components/layout/WebsiteStatus"
 import SocialDrawer from "@components/social/SocialDrawer"
 import ThemeSelector from "@components/theme/ThemeSelector"
 import ThemeProvider from "@components/theme/ThemeProvider"
 import "@styles/main.scss"
 
 const Layout = ({ children }) => {
-    console.log(process.env.GATSBY_CLOUDFRONT_CDN_URL)
-
     useEffect(() => {
         /** Bring in Smooth Scroll Library */
         if (typeof window !== "undefined") {
@@ -34,24 +32,13 @@ const Layout = ({ children }) => {
 
         /** Set Scroll Event Listener */
         document.addEventListener("scrollStart", e => {
-            document.title =
-                e.detail && data
-                    ? `${e.detail.anchor.dataset.name} | ${data.site.siteMetadata.title}`
-                    : null
+            document.title = e.detail
+                ? `${e.detail.anchor.dataset.name} | Lu-Vuong Le`
+                : null
         })
 
         return () => {}
     }, [])
-
-    const data = useStaticQuery(graphql`
-        query SiteTitleQuery {
-            site {
-                siteMetadata {
-                    title
-                }
-            }
-        }
-    `)
 
     return (
         <>
@@ -61,6 +48,7 @@ const Layout = ({ children }) => {
 
                     return (
                         <div className={`theme ${currentTheme}`}>
+                            <WebsiteStatus status="Important Notice: ✨ Website Build in Progress! ✨" />
                             <PageProgress />
                             <Navigation />
                             <main id="main" className="main">
@@ -68,7 +56,7 @@ const Layout = ({ children }) => {
                             </main>
                             <footer></footer>
                             <SocialDrawer />
-                            <ThemeSelector />
+                            {/* <ThemeSelector /> */}
                         </div>
                     )
                 }}

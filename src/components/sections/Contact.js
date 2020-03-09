@@ -22,11 +22,28 @@ export default function Contact() {
                     >
                         <div className="section__header--break">
                             <h1 className="section__header-text">
-                                Send Me a Message!
+                                Get In Touch!
                             </h1>
                         </div>
-                        <div className="section section__content">
-                            <p>Contact form coming soon</p>
+                        <div className="section section__content margin-t-md">
+                            <p>
+                                Want to work together? Got a question or just
+                                want to say hello?
+                            </p>
+                            <br />
+                            <p>
+                                Feel free to contact me. I will try my best to
+                                answer all emails!
+                            </p>
+                            <a
+                                href="mailto:lu-vuongle@outlook.com"
+                                className="btn btn--primary btn--inline-block margin-t-md"
+                                style={{
+                                    width: "20%",
+                                }}
+                            >
+                                Send me an email!
+                            </a>
                         </div>
                     </div>
                 </Container>

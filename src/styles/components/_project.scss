@@ -14,6 +14,27 @@
 
     &__content {
         margin: 0 3rem;
+        padding: 1rem 3rem;
+    }
+
+    &__header {
+        @include breakpoint(desktop) {
+            display: flex;
+            align-items: center;
+        }
+
+        &-icons {
+            @include breakpoint(desktop) {
+                margin-left: 2rem;
+                flex: 1;
+                
+                & i {
+                    font-size: 3rem;
+                    margin-left: 2rem;
+                    cursor: pointer;
+                }
+            }
+        }
     }
 
     &__desc {
@@ -32,18 +53,26 @@
 .projects {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* Non Featured Project */
 .project {
     @include breakpoint(desktop) {
-        margin: 2rem 2rem 2rem 0;
-        padding: 3rem;
+        margin: 2rem 5rem 2rem 0;
+        padding: 2rem;
         background: $dark-background-color;
         color: white;
         border-radius: 3px;
-        width: 33%;
+        width: 30%;
         box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.3);
+        transition: transform .2s ease-out;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 50px rgba($color: #000000, $alpha: 0.5);
+            cursor: pointer;
+        }
     }
 
     &__header {
@@ -51,6 +80,11 @@
 
         @include breakpoint(desktop) {
             display: flex;
+        }
+
+        & a {
+            color: $light-secondary-color;
+            margin: 0 1rem;
         }
 
         & i {

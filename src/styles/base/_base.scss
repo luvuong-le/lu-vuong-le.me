@@ -18,6 +18,11 @@ h1 {
     font-size: $primary-font-size-lrg;
 }
 
+a {
+    text-decoration: none;
+    color: $dark-background-color;
+}
+
 img {
     width: 100%;
 }

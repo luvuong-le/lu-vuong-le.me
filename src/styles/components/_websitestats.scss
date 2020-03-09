@@ -1,0 +1,36 @@
+.website-status {
+    position: fixed;
+    top: 0;
+
+    z-index: 100;
+
+    background: $dark-background-color;
+    color: #fff;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1.5rem 0;
+    width: 100%;
+
+    font-weight: bold;
+    text-align: center;
+
+    transition: transform .5s ease;
+
+    & span {
+        flex: 1;
+    }
+
+    &__close {
+        border: none;
+        background: none;
+        color: $light-secondary-color;
+        outline: none;
+
+        & i {
+            cursor: pointer;
+        }
+    }
+}

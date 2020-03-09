@@ -24,10 +24,21 @@ export default function Navigation() {
                         </a>
                     </li>
                     <li className="nav__item">
-                        <a href="#sectionProjects" className="nav__link">
+                        <a
+                            href="#sectionFeaturedProjects"
+                            className="nav__link"
+                        >
                             <i className="fas fa-code-branch"></i>
                             <span className="nav__link-text anim--fadeInRight">
-                                Projects
+                                Featured Projects
+                            </span>
+                        </a>
+                    </li>
+                    <li className="nav__item">
+                        <a href="#sectionOtherProjects" className="nav__link">
+                            <i className="fas fa-folder-open"></i>
+                            <span className="nav__link-text anim--fadeInRight">
+                                Other Projects
                             </span>
                         </a>
                     </li>
@@ -43,6 +54,8 @@ export default function Navigation() {
                         <a
                             className="nav__link"
                             href={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/docs/Resume.pdf`}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             download
                         >
                             <i className="fas fa-file"></i>

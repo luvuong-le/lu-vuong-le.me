@@ -19,14 +19,7 @@ export default function Landing({ typedEl }) {
                         <div className="landing__content">
                             <Fade top cascade>
                                 <h2 className="margin-b-sm anim--fadeInDown">
-                                    {"<Hello World />"}{" "}
-                                    <span
-                                        className="anim anim--wave margin-l-sm"
-                                        role="img"
-                                        aria-label="jsx-a11y/accessible-emoji"
-                                    >
-                                        👋
-                                    </span>
+                                    {"<Hello World />"}
                                 </h2>
                             </Fade>
                             <h1 className="margin-t-sm anim--fadeInDown">
@@ -93,13 +86,18 @@ export default function Landing({ typedEl }) {
                                     href="#sectionContact"
                                     className="btn btn--primary btn--block"
                                 >
-                                    Contact Me
+                                    <i className="fas fa-at"></i>
+                                    <span className="margin-l-sm">Contact</span>
                                 </a>
                                 <a
-                                    href="#sectionContact"
+                                    href={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/docs/Resume.pdf`}
                                     className="btn btn--primary btn--block margin-l-md"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    download
                                 >
-                                    Resume
+                                    <i className="fas fa-file"></i>
+                                    <span className="margin-l-sm">Resume</span>
                                 </a>
                             </div>
                         </div>

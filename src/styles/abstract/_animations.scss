@@ -43,6 +43,11 @@
         transition: transform .5s ease;
         animation: slideLeft .5s ease;
     }
+
+    &--slideDown {
+        transition: transform .5s ease;
+        animation: slideDown .5s ease;
+    }
 }
 
 /* Fade Effects */
@@ -86,6 +91,15 @@
     }
     100% { 
         transform: translateX(0%);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% { 
+        transform: translateY(0%);
     }
 }
 

@@ -41,28 +41,28 @@ export default function About() {
                                         <Tag
                                             name="Figma"
                                             style={{
-                                                background: "blue",
+                                                background: "#13315C",
                                                 color: "#ffffff",
                                             }}
                                         />
                                         <Tag
                                             name="Abode XD"
                                             style={{
-                                                background: "blue",
+                                                background: "#13315C",
                                                 color: "#ffffff",
                                             }}
                                         />
                                         <Tag
                                             name="Draw IO"
                                             style={{
-                                                background: "blue",
+                                                background: "#13315C",
                                                 color: "#ffffff",
                                             }}
                                         />
                                         <Tag
                                             name="Photoshop"
                                             style={{
-                                                background: "blue",
+                                                background: "#13315C",
                                                 color: "#ffffff",
                                             }}
                                         />
@@ -88,30 +88,23 @@ export default function About() {
                                     </p>
                                     <div className="tag__container tag__container--left">
                                         <Tag
-                                            name="Figma"
+                                            name="CoderDojo"
                                             style={{
-                                                background: "blue",
+                                                background: "#13315C",
                                                 color: "#ffffff",
                                             }}
                                         />
                                         <Tag
-                                            name="Abode XD"
+                                            name="Blogging"
                                             style={{
-                                                background: "blue",
+                                                background: "#13315C",
                                                 color: "#ffffff",
                                             }}
                                         />
                                         <Tag
-                                            name="Draw IO"
+                                            name="Teaching Team Members"
                                             style={{
-                                                background: "blue",
-                                                color: "#ffffff",
-                                            }}
-                                        />
-                                        <Tag
-                                            name="Photoshop"
-                                            style={{
-                                                background: "blue",
+                                                background: "#13315C",
                                                 color: "#ffffff",
                                             }}
                                         />

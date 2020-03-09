@@ -12,5 +12,11 @@
         &--left {
             justify-content: flex-start;
         }
+
+        /* Tag Icon Fonts */
+        & i {
+            margin-left: 1rem;
+            font-size: 2.5rem;
+        }
     }
 }
