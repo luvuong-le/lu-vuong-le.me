@@ -4,7 +4,7 @@
 
 > Portfolio for Lu-Vuong Le. Built using Gatsby & React
 
-![Lu-Vuong-Le.me Demo](https://d261gqwkmg2itw.cloudfront.net/assets/projects/portfolio.gif)
+![Lu-Vuong-Le.me Demo](/src/assets/demo/portfolio.gif)
 
 ## View My Portfolio
 
@@ -14,8 +14,8 @@ View the portfolio at [https://lu-vuong-le.me/](https://lu-vuong-le.me)
 
 ## Tech Stack
 
-| Technology | Description                               | Link ↘️                   |
-| ---------- | ----------------------------------------- | ------------------------- |
+| Technology | Description                               | Link ↘️                    |
+|------------|-------------------------------------------|---------------------------|
 | HTML5      | Hyper Text Markup Language                | ----                      |
 | CSS3       | Cascading Style Sheets                    | ----                      |
 | JavaScript | High Level, Dynamic, Interpreted Language | ----                      |
@@ -26,10 +26,10 @@ View the portfolio at [https://lu-vuong-le.me/](https://lu-vuong-le.me)
 ## Features / Work Progress
 
 | Key | Meaning            |
-| --- | ------------------ |
-| ✔️  | Feature Complete   |
-| ✖️  | Feature Incomplete |
-| ❓  | Feature Idea       |
+|-----|--------------------|
+| ✔️   | Feature Complete   |
+| ✖️   | Feature Incomplete |
+| ❓   | Feature Idea       |
 
 -   ✔️ Create Home Portfolio Layout
 -   ✔️ Landing
