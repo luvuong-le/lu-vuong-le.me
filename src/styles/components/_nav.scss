@@ -1,45 +1,41 @@
 .nav {
     position: fixed;
-
+    bottom: 0;
+    width: 100%;
+    height: 6rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     
-    width: 8rem;
-    height: 100vh;
-
     z-index: 999;
     transition: width 200ms ease;
-    
-    cursor: pointer;
-    
-    &:hover {
-        width: 24rem;
-    }
-
-    &:hover + main {
-        margin-left: 24rem;
-        background: rgba($color: #000000, $alpha: 0.2);
-        filter: blur(40px);
-    }
-
-    &:hover .nav__link-text {
-        display: inline;
-    }
-
-    &:hover .nav__logo-text {
-        display: inline;
-        left: 0px;
-    }
-
-    @include breakpoint(phone) {
-        bottom: 0;
-        width: 100vw;
-        height: 8rem;
-    }
 
     @include breakpoint(desktop) {
+        height: 100vh;
         top: 0;
+        width: 8rem;
+        flex-direction: column;
+            
+        cursor: pointer;
+
+        &:hover {
+            width: 24rem;
+        }
+
+        &:hover + main {
+            margin-left: 24rem;
+            background: rgba($color: #000000, $alpha: 0.2);
+            filter: blur(40px);
+        }
+
+        &:hover .nav__link-text {
+            display: inline;
+        }
+
+        &:hover .nav__logo-text {
+            display: inline;
+            left: 0px;
+        }
     }
 
     &__logo {
@@ -66,39 +62,66 @@
         padding: 0;
         margin: 0;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         height: 100%;
         width: 100%;
+
+        @include breakpoint(desktop) {
+            flex-direction: column;
+        }
     }
 
     &__item {
         width: 100%;
         font-weight: bold;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include breakpoint(desktop) {
+            height: initial;
+            justify-content: flex-start;
+        }
 
         & a {
             text-decoration: none;
+            font-size: 1.6rem;
         }
 
         &:first-child {
             filter: grayscale(0%) opacity(1);
             background: rgba($color: #000000, $alpha: 0.5);
             color: #ffffff;
+
+            @include breakpoint(desktop) {
+                display: inline-block;
+            }
         }
 
         &:last-child {
-            margin: auto;
+            @include breakpoint(desktop) {
+                margin: auto;
+            }
         }
     }
 
     &__link {
         display: flex;
+        justify-content: center;
         align-items: center;
-        height: 5rem;
+        width: 100%;
+        height: 100%;
         color: #ffffff;
         text-decoration: none;
         filter: grayscale(100%) opacity(0.7);
         transition: 200ms;
+
+        @include breakpoint(desktop) {
+            height: 5rem;
+            justify-content: flex-start;
+        }
         
         &:hover {
             filter: grayscale(0%) opacity(1);
@@ -111,9 +134,12 @@
         }
 
         & i {
-            margin: 0 3rem;
             font-size: 2rem;
-            width: 5%
+            
+            @include breakpoint(desktop) {
+                margin: 0 3rem; 
+                width: 5%;
+            }
         }
     }
 }

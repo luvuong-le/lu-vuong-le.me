@@ -5,7 +5,8 @@ import Layout from "@components/layout/Layout"
 // Sections
 import Landing from "@components/sections/Landing"
 import About from "@components/sections/About"
-import Projects from "@components/sections/Projects"
+import FeaturedProjects from "@components/sections/FeaturedProjects"
+import OtherProjects from "@components/sections/OtherProjects"
 import Contact from "@components/sections/Contact"
 
 // Third Party
@@ -33,7 +34,8 @@ const IndexPage = () => {
             {/* Sections */}
             <Landing typedEl={typedEl} />
             <About />
-            <Projects />
+            <FeaturedProjects />
+            <OtherProjects />
             <Contact />
         </Layout>
     )

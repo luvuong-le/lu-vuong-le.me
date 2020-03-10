@@ -3,12 +3,9 @@
     padding: 0 0 1.5rem 0;
 
     @include breakpoint(desktop) {
-
         &:first-child {
             height: 100vh;
         }
-
-        height: 100%;
     }
 
     &__header {
@@ -45,6 +42,18 @@
         @include breakpoint(desktop) {
             display: flex;
         }
+    }
+
+    &__featured {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__other-projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     &--grey {

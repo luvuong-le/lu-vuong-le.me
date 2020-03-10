@@ -38,9 +38,6 @@ export default function Contact() {
                             <a
                                 href="mailto:lu-vuongle@outlook.com"
                                 className="btn btn--primary btn--inline-block margin-t-md"
-                                style={{
-                                    width: "20%",
-                                }}
                             >
                                 Send me an email!
                             </a>

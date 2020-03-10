@@ -63,7 +63,7 @@ export default function Landing({ typedEl }) {
                                 </span>
                                 <span className="fsize-l" ref={typedEl}></span>
                             </div>
-                            <div className="flex margin-t-lg">
+                            <div className="flex landing__content-text">
                                 <div className="flex flex-column">
                                     <p className="landing__text fweight-b anim--fadeInDown">
                                         Software Engineer with a sound
@@ -83,7 +83,7 @@ export default function Landing({ typedEl }) {
                             </div>
                             <div className="landing__cta anim--fadeInDown">
                                 <a
-                                    href="#sectionContact"
+                                    href="#contact"
                                     className="btn btn--primary btn--block"
                                 >
                                     <i className="fas fa-at"></i>

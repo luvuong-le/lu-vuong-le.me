@@ -1,9 +1,9 @@
 import React from "react"
 import { css } from "@emotion/core"
 
-export default function Container({ styles, children }) {
+export default function Container({ style, children }) {
     const containerStyles = css`
-        padding: 0 4rem;
+        padding: ${style ? style.padding : "0 4rem"};
         margin: 4rem 0;
         display: flex;
         align-items: center;

@@ -2,17 +2,31 @@
     &__block {
         display: flex;
         align-items: center;
+        flex-direction: column;
 
         text-align: center;
         margin: 4rem 0;
 
+        @include breakpoint(desktop) {
+            flex-direction: row;
+        }
+
         &-content {
-            width: 50%;
+            width: 100%;
+
+            @include breakpoint(desktop) {
+                width: 50%;
+            }
         }
 
         & img {
             width: 50%;
             margin-bottom: 1rem;
+            order: 2;
+
+            @include breakpoint(desktop) {
+                order: initial;
+            }
         }
 
         &--profile {

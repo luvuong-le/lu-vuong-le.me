@@ -2,8 +2,8 @@
     &__container {
         display: flex;
         flex-wrap: wrap;  
-
         margin: 3rem 0;
+        font-size: 1.6rem;
 
         &--right {
             justify-content: flex-end;

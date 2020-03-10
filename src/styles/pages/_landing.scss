@@ -3,6 +3,7 @@
     &__body {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
         margin: 4rem 0 0 0;
 
         @include breakpoint(phone) {
@@ -21,6 +22,7 @@
 
         @include breakpoint(desktop) {
             display: flex;
+            flex-direction: row;
 
             & p {
                 font-size: 1.8rem;
@@ -29,8 +31,7 @@
     }
 
     &__content {
-
-        width: 50%; 
+        width: 100%;
 
         & h2 {
             font-size: 2rem;
@@ -46,6 +47,14 @@
             }
         }
 
+        &-text {
+            margin: 4rem 0;
+
+            @include breakpoint(desktop) {
+                margin: 6rem 0;
+            }
+        }
+
         & h1 {
             font-size: 2.5rem;
             animation-duration: 1s;
@@ -57,6 +66,7 @@
         }
 
         @include breakpoint(desktop) {
+            width: 50%; 
             padding: 0 3rem 0 0;
             display: flex;
             flex-flow: column;
@@ -74,7 +84,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 50%; 
+        margin-top: 4rem;
+        width: 100%;
+        
+        @include breakpoint(desktop) {
+            width: 50%; 
+        }
     }
 
     &__cta {
