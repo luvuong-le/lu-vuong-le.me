@@ -34,12 +34,25 @@ main {
     transition: 200ms ease;
 }
 
+@include breakpoint(tablet-landscape) {
+    main {
+        margin-left: 0;
+    }
+}
+
 @include breakpoint(phone) {
     p {
         font-size: 1.2rem;
     }
 
     main {
-        margin: 0;
+        margin-left: 0;
+    }
+}
+
+/* IPad Pro Specific */
+@media only screen and (min-width: 1024px) and (max-width: 1224px) {
+    main {
+        margin-left: 8rem;
     }
 }

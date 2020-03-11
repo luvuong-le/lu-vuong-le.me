@@ -19,11 +19,11 @@
         cursor: pointer;
 
         &:hover {
-            width: 24rem;
+            width: 26rem;
         }
 
         &:hover + main {
-            margin-left: 24rem;
+            margin-left: 26rem;
             background: rgba($color: #000000, $alpha: 0.2);
             filter: blur(40px);
         }
@@ -47,9 +47,10 @@
         }
 
         &-text {
-            font-family: 'Megrim', sans-serif;
+            font-family: 'SF UI Display Bold', sans-serif;
             font-size: 2.2rem;
             text-transform: uppercase;
+            min-width: 18rem;
 
             @include breakpoint(phone) {
                 font-size: 3rem;
@@ -100,11 +101,12 @@
             }
         }
 
-        &:last-child {
-            @include breakpoint(desktop) {
-                margin: auto;
-            }
-        }
+        /* TODO: Use when implementing theme selector */
+        // &:last-child {
+        //     @include breakpoint(desktop) {
+        //         margin: auto;
+        //     }
+        // }
     }
 
     &__link {

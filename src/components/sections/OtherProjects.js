@@ -15,8 +15,8 @@ export default function OtherProjects() {
                 data-name="Other Projects"
             >
                 <Container>
-                    <div>
-                        <div className="section__header--break">
+                    <div className="full-width">
+                        <div className="section__header--break margin-t-md">
                             <h1 className="section__header-text">
                                 Other Notable Projects
                             </h1>

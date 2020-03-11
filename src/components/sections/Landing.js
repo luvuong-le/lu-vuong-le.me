@@ -10,9 +10,9 @@ export default function Landing({ typedEl }) {
         <section
             id="sectionLanding"
             className="section section__landing section--light"
-            data-name="Landing"
+            data-name="Home"
         >
-            <SEO title="Landing" />
+            <SEO title="Home" />
             <Container>
                 <div className="landing">
                     <div className="landing__body">

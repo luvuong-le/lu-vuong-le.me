@@ -6,6 +6,7 @@
         flex-direction: column;
         
         & img {
+            order: 1;
             width: 80%;
         }
 
@@ -13,9 +14,10 @@
             margin: 4rem 0;
 
             display: grid;
-            grid-template-columns: repeat(auto-fit, 50%);
+            grid-template-columns: 1fr 1fr;
 
             & img {
+                order: initial;
                 width: 100%;
             }
         }
@@ -79,7 +81,6 @@
 
     @include breakpoint(desktop) {
         margin: 2rem 5rem 2rem 0;
-        width: 30%;
         box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.3);
         transition: transform .2s ease-out;
 
@@ -96,6 +97,7 @@
 
         @include breakpoint(desktop) {
             display: flex;
+            flex-wrap: wrap;
         }
 
         & a {

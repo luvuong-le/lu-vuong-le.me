@@ -17,6 +17,14 @@
             @include breakpoint(desktop) {
                 width: 50%;
             }
+
+            & p {
+                margin-top: 4rem;
+
+                @include breakpoint(desktop) {
+                    margin-top: 8rem;
+                }
+            }
         }
 
         & img {

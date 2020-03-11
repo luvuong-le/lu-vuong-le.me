@@ -7,10 +7,26 @@
 
         &--right {
             justify-content: flex-end;
+
+            @include breakpoint(tablet-landscape) {
+                justify-content: center;
+            }
+
+            @include breakpoint(phone) {
+                justify-content: center;
+            }
         }
 
         &--left {
             justify-content: flex-start;
+            
+            @include breakpoint(tablet-landscape) {
+                justify-content: center;
+            }
+
+            @include breakpoint(phone) {
+                justify-content: center;
+            }
         }
 
         /* Tag Icon Fonts */

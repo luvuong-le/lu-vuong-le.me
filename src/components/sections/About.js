@@ -26,7 +26,7 @@ export default function About() {
                                             Designer
                                         </h1>
                                     </div>
-                                    <p className="margin-t-lg anim--fadeInDown">
+                                    <p className="anim--fadeInDown">
                                         Skilled at design systems, UI design and
                                         designing interfaces between different
                                         components. Although not many developers
@@ -76,7 +76,7 @@ export default function About() {
                                             Mentor
                                         </h1>
                                     </div>
-                                    <p className="margin-t-lg anim--fadeInDown">
+                                    <p className="anim--fadeInDown">
                                         I believe teaching is one of the best
                                         ways to share knowledge and solidify
                                         your own knowledge at the same time. As
