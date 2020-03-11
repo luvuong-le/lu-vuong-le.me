@@ -52,16 +52,23 @@
 
     &__other-projects {
         display: grid; 
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); 
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
         grid-gap: 2rem;
-        justify-items: center;
+
+        @include breakpoint(phone) {
+            grid-template-columns: 1fr; 
+        }
     }
 
     &__archive {
         display: grid; 
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); 
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
         grid-gap: 2rem;
         justify-items: center;
+        
+        @include breakpoint(phone) {
+            grid-template-columns: 1fr; 
+        }
     }
 
     &--grey {
