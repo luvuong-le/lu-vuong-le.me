@@ -33,17 +33,21 @@
     }
 
     &__header {
-        @include breakpoint(desktop) {
-            display: flex;
-            align-items: center;
-        }
+        display: flex;
+        align-items: center;
 
         &-icons {
+            & a > i {
+                font-size: 1.5rem;
+                margin: 1rem;
+                cursor: pointer;
+            }
+
             @include breakpoint(desktop) {
                 margin-left: 2rem;
                 flex: 1;
                 
-                & i {
+                & a > i {
                     font-size: 3rem;
                     margin-left: 2rem;
                     cursor: pointer;
