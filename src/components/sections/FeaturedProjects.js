@@ -7,13 +7,13 @@ import Fade from "react-reveal/Fade"
 
 export default function FeaturedProjects() {
     return (
-        <Fade>
-            <section
-                id="featured"
-                className="section section__featured"
-                data-name="Featured Projects"
-            >
-                <Container>
+        <section
+            id="featured"
+            className="section section__featured"
+            data-name="Featured Projects"
+        >
+            <Container>
+                <Fade>
                     <div>
                         <div className="section__header--break">
                             <h1 className="section__header-text">
@@ -479,8 +479,8 @@ export default function FeaturedProjects() {
                             </div>
                         </div>
                     </div>
-                </Container>
-            </section>
-        </Fade>
+                </Fade>
+            </Container>
+        </section>
     )
 }
