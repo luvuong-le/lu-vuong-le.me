@@ -8,7 +8,7 @@ export default function Contact() {
         <Fade>
             <section
                 id="contact"
-                className="section contact"
+                className="section section__contact"
                 data-name="Contact"
             >
                 <Container>
