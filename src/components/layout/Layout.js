@@ -56,7 +56,7 @@ const Layout = ({ children }) => {
 
                     return (
                         <div className={`theme ${currentTheme}`}>
-                            <WebsiteStatus status="Important Notice: ✨ Website Build in Progress! ✨" />
+                            {/* <WebsiteStatus status="Important Notice: ✨ Website Build in Progress! ✨" /> */}
                             <PageProgress />
                             <Navigation />
                             <main id="main" className="main">
