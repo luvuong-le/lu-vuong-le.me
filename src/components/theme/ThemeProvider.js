@@ -7,6 +7,13 @@ export default function ThemeProvider({ children }) {
     const [theme, setTheme] = useState("light")
 
     useEffect(() => {
+        const setDefaultTheme = () => {
+            if (!localStorage.getItem("theme") || !theme) {
+                localStorage.setItem("theme", "light")
+            }
+            setTheme(localStorage.getItem("theme"))
+        }
+
         setDefaultTheme()
         return () => {}
     }, [theme])
@@ -17,13 +24,6 @@ export default function ThemeProvider({ children }) {
         } else {
             return localStorage.getItem("theme")
         }
-    }
-
-    const setDefaultTheme = () => {
-        if (!localStorage.getItem("theme") || !theme) {
-            localStorage.setItem("theme", "light")
-        }
-        setTheme(localStorage.getItem("theme"))
     }
 
     return <div>{children({ theme: getTheme(), setTheme })}</div>

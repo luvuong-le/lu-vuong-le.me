@@ -1,5 +1,6 @@
 import React from "react"
 import Container from "@components/layout/Container"
+import LazyLoad from "react-lazyload"
 
 import Tag from "@components/tags/Tag.js"
 import Fade from "react-reveal/Fade"
@@ -16,10 +17,14 @@ export default function About() {
                     <div className="about">
                         <div className="section__content">
                             <div className="about__block">
-                                <img
-                                    src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/images/undraw_trendy_interface_lg8x.svg`}
-                                    alt="Designer"
-                                />
+                                <LazyLoad>
+                                    <Fade>
+                                        <img
+                                            src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/images/undraw_trendy_interface_lg8x.svg`}
+                                            alt="Designer"
+                                        />
+                                    </Fade>
+                                </LazyLoad>
                                 <div className="about__block-content">
                                     <div className="section__header--break">
                                         <h1 className="section__header-text anim--fadeInDown">
@@ -110,10 +115,14 @@ export default function About() {
                                         />
                                     </div>
                                 </div>
-                                <img
-                                    src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/images/undraw_professor_8lrt.svg`}
-                                    alt="Mentor / Professor"
-                                />
+                                <LazyLoad>
+                                    <Fade>
+                                        <img
+                                            src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/images/undraw_professor_8lrt.svg`}
+                                            alt="Mentor / Professor"
+                                        />
+                                    </Fade>
+                                </LazyLoad>
                             </div>
                         </div>
                     </div>

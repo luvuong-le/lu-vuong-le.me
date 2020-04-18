@@ -24,8 +24,10 @@
 
         &:hover + main {
             margin-left: 26rem;
-            background: rgba($color: #000000, $alpha: 0.2);
-            filter: blur(40px);
+        }
+
+        &:hover + main > div[name="overlay-main"] {
+            opacity: 1;
         }
 
         &:hover .nav__link-text {

@@ -1,5 +1,6 @@
 import React from "react"
 import Container from "@components/layout/Container"
+import LazyLoad from "react-lazyload";
 
 import Tag from "@components/tags/Tag.js"
 
@@ -22,10 +23,15 @@ export default function FeaturedProjects() {
                         </div>
                         <div className="section__content margin-t-md">
                             <div className="featured featured__project">
-                                <img
-                                    src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/projects/astro-chat.gif`}
-                                    alt="Designer"
-                                />
+                                <LazyLoad>
+                                    <Fade>
+                                        <img
+                                            loading="lazy"
+                                            src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/projects/astro-chat.gif`}
+                                            alt="Astro Chat Project"
+                                            />
+                                    </Fade>
+                                </LazyLoad>
                                 <div className="featured__content">
                                     <div className="tag__container">
                                         <Tag
@@ -185,16 +191,26 @@ export default function FeaturedProjects() {
                                         />
                                     </div>
                                 </div>
-                                <img
-                                    src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/projects/snake-game.gif`}
-                                    alt="Designer"
-                                />
+                                <LazyLoad>
+                                    <Fade>
+                                        <img
+                                            loading="lazy"
+                                            src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/projects/snake-game.gif`}
+                                            alt="Snake Game Project"
+                                        />
+                                    </Fade>
+                                </LazyLoad>
                             </div>
                             <div className="featured featured__project">
-                                <img
-                                    src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/projects/mplayer-demo.gif`}
-                                    alt="Designer"
-                                />
+                                <LazyLoad>
+                                    <Fade>
+                                        <img
+                                            loading="lazy"
+                                            src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/projects/mplayer-demo.gif`}
+                                            alt="Mplayer Project"
+                                            />
+                                    </Fade>
+                                </LazyLoad>
                                 <div className="featured__content">
                                     <div className="tag__container">
                                         <Tag
@@ -331,16 +347,26 @@ export default function FeaturedProjects() {
                                         />
                                     </div>
                                 </div>
-                                <img
-                                    src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/projects/game-of-life-ts.gif`}
-                                    alt="Designer"
-                                />
+                                <LazyLoad>
+                                    <Fade>
+                                        <img
+                                            loading="lazy"
+                                            src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/projects/game-of-life-ts.gif`}
+                                            alt="Game Of Life Project"
+                                            />
+                                    </Fade>
+                                </LazyLoad>
                             </div>
                             <div className="featured featured__project">
-                                <img
-                                    src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/projects/node-project-generator.gif`}
-                                    alt="Designer"
-                                />
+                                <LazyLoad>
+                                    <Fade>
+                                        <img
+                                            loading="lazy"
+                                            src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/projects/node-project-generator.gif`}
+                                            alt="Node Project Generator"
+                                            />
+                                    </Fade>
+                                </LazyLoad>
                                 <div className="featured__content">
                                     <div className="tag__container">
                                         <Tag
@@ -472,10 +498,15 @@ export default function FeaturedProjects() {
                                         />
                                     </div>
                                 </div>
-                                <img
-                                    src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/projects/webcomponents.gif`}
-                                    alt="Designer"
-                                />
+                                <LazyLoad>
+                                    <Fade>
+                                        <img
+                                            loading="lazy"
+                                            src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/projects/webcomponents.gif`}
+                                            alt="Web Components Project"
+                                        />
+                                    </Fade>
+                                </LazyLoad>
                             </div>
                         </div>
                     </div>

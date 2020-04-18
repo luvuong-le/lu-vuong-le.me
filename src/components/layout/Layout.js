@@ -9,10 +9,9 @@ import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 
 import Navigation from "@components/layout/Navigation"
+import Overlay from "@components/layout/Overlay"
 import PageProgress from "@components/layout/PageProgress"
-import WebsiteStatus from "@components/layout/WebsiteStatus"
 import SocialDrawer from "@components/social/SocialDrawer"
-import ThemeSelector from "@components/theme/ThemeSelector"
 import ThemeProvider from "@components/theme/ThemeProvider"
 import "@styles/main.scss"
 
@@ -56,15 +55,14 @@ const Layout = ({ children }) => {
 
                     return (
                         <div className={`theme ${currentTheme}`}>
-                            {/* <WebsiteStatus status="Important Notice: ✨ Website Build in Progress! ✨" /> */}
                             <PageProgress />
                             <Navigation />
                             <main id="main" className="main">
+                                <Overlay name="overlay-main" />
                                 {children}
                             </main>
                             <footer></footer>
                             <SocialDrawer />
-                            {/* <ThemeSelector /> */}
                         </div>
                     )
                 }}

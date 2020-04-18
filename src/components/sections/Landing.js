@@ -1,5 +1,6 @@
 import React from "react"
 import Container from "@components/layout/Container"
+import LazyLoad from "react-lazyload"
 
 import SEO from "@components/seo/Seo"
 
@@ -102,10 +103,14 @@ export default function Landing({ typedEl }) {
                             </div>
                         </div>
                         <div className="landing__img anim--fadeInRight">
-                            <img
-                                src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/images/undraw-coding.svg`}
-                                alt="Undraw Coding"
-                            />
+                            <LazyLoad>
+                                <Fade>
+                                    <img
+                                        src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/images/undraw-coding.svg`}
+                                        alt="Undraw Coding"
+                                    />
+                                </Fade>
+                            </LazyLoad>
                         </div>
                     </div>
                 </div>

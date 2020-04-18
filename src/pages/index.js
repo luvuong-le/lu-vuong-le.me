@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 
 import Layout from "@components/layout/Layout"
+import SEO from "@components/seo/Seo"
 
 // Sections
 import Landing from "@components/sections/Landing"
@@ -31,7 +32,7 @@ const IndexPage = () => {
 
     return (
         <Layout>
-            {/* Sections */}
+            <SEO title="Home | Lu-Vuong Le" />
             <Landing typedEl={typedEl} />
             <About />
             <FeaturedProjects />
