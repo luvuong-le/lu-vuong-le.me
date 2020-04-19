@@ -10,6 +10,7 @@ export default function SocialDrawer() {
         position: fixed;
         bottom: 2rem;
         right: 2rem;
+        z-index: 2;
 
         @media only screen and (max-width: 1024px) {
             bottom: 8rem;

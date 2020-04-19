@@ -1,3 +1,9 @@
+if (process.env.NODE_ENV === "development") {
+    require("dotenv").config({
+        path: `.env.${process.env.NODE_ENV}`,
+    })
+}
+
 module.exports = {
     siteMetadata: {
         title: `Lu-Vuong Le`,
@@ -5,6 +11,13 @@ module.exports = {
         author: `@luvuong-le`,
     },
     plugins: [
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `blog`,
+                path: `${__dirname}/content/blog`,
+            },
+        },
         `gatsby-plugin-react-helmet`,
         {
             resolve: "gatsby-plugin-load-script",
@@ -12,6 +25,7 @@ module.exports = {
                 src: "https://kit.fontawesome.com/116ecaa9e7.js",
             },
         },
+        `gatsby-transformer-remark`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         {
@@ -69,7 +83,7 @@ module.exports = {
                         process.env.GUESS_JWT_PRIVATE_KEY,
                         "base64"
                     ).toString("ascii"),
-                }
+                },
             },
         },
     ],

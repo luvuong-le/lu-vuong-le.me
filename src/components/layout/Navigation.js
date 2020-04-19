@@ -29,6 +29,18 @@ export default function Navigation() {
                     </li>
                     <li className="nav__item">
                         <a
+                            href="/blog"
+                            className="nav__link"
+                            data-tooltip="Blog"
+                        >
+                            <i className="fas fa-blog"></i>
+                            <span className="nav__link-text anim--fadeInRight">
+                                Blog
+                            </span>
+                        </a>
+                    </li>
+                    <li className="nav__item">
+                        <a
                             href="/#featured"
                             className="nav__link"
                             data-tooltip="Featured Projects"

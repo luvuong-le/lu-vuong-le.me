@@ -27,6 +27,7 @@
         }
 
         &:hover + main > div[name="overlay-main"] {
+            visibility: visible;
             opacity: 1;
         }
 
