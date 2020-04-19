@@ -1,7 +1,7 @@
 import React from "react"
 import LazyLoad from "react-lazyload"
 import Fade from "react-reveal/Fade"
-import styled from "@emotion/styled";
+import styled from "@emotion/styled"
 
 import Layout from "@components/layout/Layout"
 import SEO from "@components/seo/Seo"
@@ -22,26 +22,28 @@ const Container = styled.div`
     @media screen and (max-width: 768px) {
         width: 100%;
     }
-`;
+`
 
 const ErrorHeading = styled.h1`
-    background: #13315C;
+    background: #13315c;
     padding: 1rem;
     color: #ffffff;
     text-align: center;
     margin: 1rem 0;
     font-weight: bold;
-`;
+`
 
 const Img = styled.img`
     width: 100%;
-`;
+`
 
 const NotFoundPage = () => (
     <Layout>
         <SEO title="404: Not found" />
         <Container>
-            <ErrorHeading>Oops! What you're looking for doesn't exist...</ErrorHeading>
+            <ErrorHeading>
+                Oops! What you're looking for doesn't exist...
+            </ErrorHeading>
             <LazyLoad>
                 <Fade>
                     <Img

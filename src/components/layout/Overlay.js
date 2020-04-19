@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from "@emotion/styled"
 
 const Overlay = styled.div`
     position: fixed;
@@ -8,8 +8,8 @@ const Overlay = styled.div`
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
     opacity: 0;
-    transition: opacity .3s ease;
+    transition: opacity 0.3s ease;
     z-index: 1;
-`;
+`
 
-export default Overlay;
+export default Overlay

@@ -1,6 +1,6 @@
 import React from "react"
 import Container from "@components/layout/Container"
-import LazyLoad from "react-lazyload";
+import LazyLoad from "react-lazyload"
 
 import Tag from "@components/tags/Tag.js"
 
@@ -29,7 +29,7 @@ export default function FeaturedProjects() {
                                             loading="lazy"
                                             src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/projects/astro-chat.gif`}
                                             alt="Astro Chat Project"
-                                            />
+                                        />
                                     </Fade>
                                 </LazyLoad>
                                 <div className="featured__content">
@@ -208,7 +208,7 @@ export default function FeaturedProjects() {
                                             loading="lazy"
                                             src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/projects/mplayer-demo.gif`}
                                             alt="Mplayer Project"
-                                            />
+                                        />
                                     </Fade>
                                 </LazyLoad>
                                 <div className="featured__content">
@@ -353,7 +353,7 @@ export default function FeaturedProjects() {
                                             loading="lazy"
                                             src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/projects/game-of-life-ts.gif`}
                                             alt="Game Of Life Project"
-                                            />
+                                        />
                                     </Fade>
                                 </LazyLoad>
                             </div>
@@ -364,7 +364,7 @@ export default function FeaturedProjects() {
                                             loading="lazy"
                                             src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/projects/node-project-generator.gif`}
                                             alt="Node Project Generator"
-                                            />
+                                        />
                                     </Fade>
                                 </LazyLoad>
                                 <div className="featured__content">

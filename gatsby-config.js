@@ -41,6 +41,48 @@ module.exports = {
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         `gatsby-plugin-offline`,
-        `gatsby-plugin-netlify-cms`
+        `gatsby-plugin-netlify-cms`,
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                // The property ID; the tracking code won't be generated without it
+                trackingId: process.env.GA_TRACKING_ID,
+                // Defines where to place the tracking script - `true` in the head and `false` in the body
+                head: false,
+                // Setting this parameter is optional
+                anonymize: true,
+                // Setting this parameter is also optional
+                respectDNT: true,
+                // Avoids sending pageview hits from custom paths
+                exclude: [""],
+                // Delays sending pageview hits on route update (in milliseconds)
+                pageTransitionDelay: 0,
+                // Any additional optional fields
+                sampleRate: 5,
+                siteSpeedSampleRate: 10,
+                cookieDomain: "auto",
+            },
+        },
+        {
+            resolve: "gatsby-plugin-guess-js",
+            options: {
+                // Find the view id in the GA admin in a section labeled "views"
+                GAViewID: process.env.GA_VIEW_ID,
+                // Add a JWT to get data from GA
+                jwt: {
+                    client_email: process.env.GUESS_JWT_EMAIL,
+                    private_key: Buffer.from(
+                        process.env.GUESS_JWT_PRIVATE_KEY,
+                        "base64"
+                    ).toString("ascii"),
+                },
+                minimumThreshold: 0.03,
+                // The "period" for fetching analytic data.
+                period: {
+                    startDate: new Date("2018-1-1"),
+                    endDate: new Date(),
+                },
+            },
+        },
     ],
 }
