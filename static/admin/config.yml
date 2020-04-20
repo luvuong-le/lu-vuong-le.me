@@ -2,17 +2,22 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: static/assets
-public_folder: /assets
+media_folder: static/assets/media
+public_folder: /assets/media
+
+publish_mode: editorial_workflow
+site_url: https://lu-vuong-le.me/
 
 collections:
-  - name: "blog"
-    label: "Blog"
+  - name: "Blog"
+    label: "Blog Post"
     folder: "content/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image", required: false }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "select", multiple: true, options: ["Design", "Web Dev", "UX / UI", "Programming"]}
