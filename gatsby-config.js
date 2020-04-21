@@ -9,6 +9,7 @@ module.exports = {
         title: `Lu-Vuong Le`,
         description: `Welcome to my portfolio! I am a software engineer, mentor and designer`,
         author: `@luvuong-le`,
+        siteUrl: `https://lu-vuong-le.me/`,
     },
     plugins: [
         {
