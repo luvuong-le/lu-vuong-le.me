@@ -45,7 +45,6 @@ const PostTags = styled.div`
 `
 
 function BlogItem({ post }) {
-    console.log(post)
     return (
         <PostItemContainer>
             <Link to={post.fields.slug}>

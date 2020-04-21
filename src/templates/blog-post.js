@@ -59,7 +59,6 @@ const PostDate = styled.span`
 
 export default ({ data }) => {
     const post = data.markdownRemark
-    console.log(post)
     return (
         <Layout>
             <Fade>
