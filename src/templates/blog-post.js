@@ -3,6 +3,8 @@ import { graphql } from "gatsby"
 import styled from "@emotion/styled"
 import Layout from "@components/layout/Layout"
 
+import Fade from "react-reveal/Fade"
+
 export const query = graphql`
     query($slug: String!) {
         markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -10,6 +12,14 @@ export const query = graphql`
             frontmatter {
                 title
                 date(formatString: "DD MMMM, YYYY")
+                description
+                tags
+                thumbnail
+            }
+            fields {
+                readingTime {
+                    text
+                }
             }
         }
     }
@@ -18,33 +28,32 @@ export const query = graphql`
 const Section = styled.section`
     background: #f9fafb;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: relative;
+    padding-top: 5rem;
 `
 
 const PostContainer = styled.div`
     width: 80%;
     padding: 3rem 10rem;
     background: #fff;
+    box-shadow: 3px 3px 30px rgba(31, 36, 48, 0.08);
     margin: 0 auto;
-    position: absolute;
-    top: 5rem;
-    left: 50%;
-    transform: translateX(-50%);
     font-size: 1.6rem;
 `
 
 const PostTitle = styled.span`
     display: block;
-    font-size: 2.4rem;
+    font-size: 3.5rem;
     font-weight: bold;
     color: #000;
+    margin-top: 4rem;
     margin-bottom: 2rem;
 `
 
 const PostDate = styled.span`
     display: block;
-    margin: 0 0 1rem 0;
+    margin: 0 0 4rem 0;
     color: #bbb;
 `
 
@@ -53,14 +62,19 @@ export default ({ data }) => {
     console.log(post)
     return (
         <Layout>
-            <Section className="section section__singlepost">
-                <PostContainer>
-                    <PostTitle>{post.frontmatter.title}</PostTitle>
-                    <PostDate>{post.frontmatter.date}</PostDate>
-                    {/* TODO: Add User Details - Name - Socials */}
-                    <div dangerouslySetInnerHTML={{ __html: post.html }} />
-                </PostContainer>
-            </Section>
+            <Fade>
+                <Section>
+                    <PostContainer className="post post__container">
+                        <PostTitle>{post.frontmatter.title}</PostTitle>
+                        <PostDate>
+                            {post.frontmatter.date} -{" "}
+                            {post.fields.readingTime.text}
+                        </PostDate>
+                        {/* TODO: Add User Details - Name - Socials */}
+                        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                    </PostContainer>
+                </Section>
+            </Fade>
         </Layout>
     )
 }

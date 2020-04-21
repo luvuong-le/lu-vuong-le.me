@@ -6,6 +6,7 @@ import styled from "@emotion/styled"
 import Layout from "@components/layout/Layout"
 import SEO from "@components/seo/Seo"
 import BlogItem from "@components/blog/BlogItem"
+import Fade from "react-reveal/Fade"
 
 export const query = graphql`
     query {
@@ -17,9 +18,15 @@ export const query = graphql`
                     frontmatter {
                         title
                         date(formatString: "DD MMMM, YYYY")
+                        description
+                        tags
+                        thumbnail
                     }
                     fields {
                         slug
+                        readingTime {
+                            text
+                        }
                     }
                     excerpt
                 }
@@ -49,25 +56,31 @@ const BlogPage = ({ data }) => {
     return (
         <Layout>
             <SEO title="Home | Lu-Vuong Le" />
-            <Section id="sectionBlog" className="section section__blog">
-                <Container>
-                    <div className="full-width">
-                        <div className="section__header--break">
-                            <div>
-                                <h1 className="section__header-text">Blog</h1>
+            <Fade>
+                <Section id="sectionBlog" className="section section__blog">
+                    <Container>
+                        <div className="full-width">
+                            <div className="section__header--break">
+                                <div>
+                                    <h1 className="section__header-text">
+                                        Blog
+                                    </h1>
+                                </div>
                             </div>
+                            <h4 className="fsize-sm">
+                                {data.allMarkdownRemark.totalCount} Posts
+                            </h4>
+                            <BlogItemContainer>
+                                {data.allMarkdownRemark.edges.map(
+                                    ({ node }) => (
+                                        <BlogItem key={node.id} post={node} />
+                                    )
+                                )}
+                            </BlogItemContainer>
                         </div>
-                        <h4 className="fsize-sm">
-                            {data.allMarkdownRemark.totalCount} Posts
-                        </h4>
-                        <BlogItemContainer>
-                            {data.allMarkdownRemark.edges.map(({ node }) => (
-                                <BlogItem post={node} />
-                            ))}
-                        </BlogItemContainer>
-                    </div>
-                </Container>
-            </Section>
+                    </Container>
+                </Section>
+            </Fade>
         </Layout>
     )
 }

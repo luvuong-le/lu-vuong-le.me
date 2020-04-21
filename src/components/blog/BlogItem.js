@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
+import Tag from "@components/tags/Tag"
 
 const PostItemContainer = styled.div``
 
@@ -25,6 +26,7 @@ const PostTitle = styled.span`
     font-size: 2.4rem;
     font-weight: bold;
     color: #000;
+    margin: 1rem 0;
 `
 
 const PostDate = styled.span`
@@ -34,18 +36,38 @@ const PostDate = styled.span`
 `
 
 const PostContent = styled.p`
-    margin: 1rem 0;
+    margin: 2rem 0;
     color: grey;
 `
 
+const PostTags = styled.div`
+    display: flex;
+`
+
 function BlogItem({ post }) {
+    console.log(post)
     return (
         <PostItemContainer>
             <Link to={post.fields.slug}>
                 <PostItem key={post.id}>
-                    <PostDate>{post.frontmatter.date}</PostDate>
+                    <PostDate>
+                        {post.frontmatter.date} - {post.fields.readingTime.text}
+                    </PostDate>
                     <PostTitle>{post.frontmatter.title} </PostTitle>
                     <PostContent>{post.excerpt}</PostContent>
+                    <PostTags>
+                        {post.frontmatter.tags &&
+                            post.frontmatter.tags.map((tagName, index) => (
+                                <Tag
+                                    key={index}
+                                    name={tagName}
+                                    style={{
+                                        background: "#1335CC",
+                                        color: "#ffffff",
+                                    }}
+                                />
+                            ))}
+                    </PostTags>
                 </PostItem>
             </Link>
         </PostItemContainer>

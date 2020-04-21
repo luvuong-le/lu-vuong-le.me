@@ -4,13 +4,16 @@ date: 2020-04-20T10:57:54.764Z
 thumbnail: /assets/media/letter-blocks-247819.jpg
 description: 5 Lessons I've learned during my first year as a Software Engineer
 tags:
-  - UX / UI
-  - Programming
-  - Design
-  - Web Dev
+    - UX / UI
+    - Programming
+    - Design
+    - Web Dev
 ---
+
 ```javascript
-console.log("First Software Engineer Job Experiences");
+var test = "test"
+console.log("First Software Engineer Job Experiences")
+test(2, 3)
 ```
 
 Just starting out your first job as a software engineer? It definitely can be a nerve wracking experience not knowing what to expect or know if you'll even manage to do well in the role and reach expectations.
@@ -57,4 +60,4 @@ It might seem difficult, you might have trouble understanding the large codebase
 
 > "When the going gets tough, put one foot in front of the other and just keep going. Don’t give up." - Roy T. Bennett
 
-** Those are some of the important things I've personally learned during my first year, if anyone else has anything they've learned and would like to share that would benefit others and myself, I'd love to hear about them! 🙂**
+**Those are some of the important things I've personally learned during my first year, if anyone else has anything they've learned and would like to share that would benefit others and myself, I'd love to hear about them! 🙂**

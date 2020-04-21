@@ -19,7 +19,6 @@ const Layout = ({ children }) => {
     useEffect(() => {
         /** Bring in Smooth Scroll Library */
         if (typeof window !== "undefined") {
-            // eslint-disable-next-line global-require
             require("smooth-scroll")('a[href*="#"]', {
                 offset: function(anchor, toggle) {
                     return 0

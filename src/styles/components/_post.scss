@@ -1,0 +1,24 @@
+.post {
+    &__container {
+        & p {
+            padding: .5em 0;
+            margin: 1em 0;
+            color: #000000;
+        }
+
+        & pre {
+            background: #000000;
+            border-radius: 10px;
+        }
+
+        & h1, h2, h3, h4, h5, h6 {
+            margin: 1em 0;
+            color: #000000;
+        }
+
+        & hr {
+            margin: 1em 0;
+            width: 50%;
+        }
+    }
+}
