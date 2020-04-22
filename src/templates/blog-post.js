@@ -31,6 +31,7 @@ const Section = styled.section`
     height: 100%;
     position: relative;
     padding-top: 5rem;
+    padding-bottom: 8rem;
 `
 
 const PostContainer = styled.div`
@@ -40,6 +41,11 @@ const PostContainer = styled.div`
     box-shadow: 3px 3px 30px rgba(31, 36, 48, 0.08);
     margin: 0 auto;
     font-size: 1.6rem;
+
+    @media only screen and (max-width: 768px) {
+        width: 90%;
+        padding: 3rem;
+    }
 `
 
 const PostTitle = styled.span`
@@ -49,6 +55,11 @@ const PostTitle = styled.span`
     color: #000;
     margin-top: 4rem;
     margin-bottom: 2rem;
+
+    @media only screen and (max-width: 768px) {
+        margin-top: 2rem;
+        font-size: 2.5rem;
+    }
 `
 
 const PostDate = styled.span`

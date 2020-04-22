@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import Tag from "@components/tags/Tag"
 
@@ -42,6 +41,11 @@ const PostContent = styled.p`
 
 const PostTags = styled.div`
     display: flex;
+    flex-flow: row wrap;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1.3rem;
+    }
 `
 
 function BlogItem({ post }) {

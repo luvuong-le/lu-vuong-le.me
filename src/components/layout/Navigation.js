@@ -1,35 +1,55 @@
 import React from "react"
-
+import { Link } from "gatsby"
 import Fade from "react-reveal/Fade"
 
 export default function Navigation() {
+    const navigateTo = e => {
+        if (window.location.pathname === "/") {
+            e.preventDefault()
+
+            const scrollToElement = document.getElementById(
+                e.currentTarget.dataset.smoothScroll
+            )
+
+            scrollToElement.scrollIntoView({ behavior: "smooth" })
+        }
+    }
+
     return (
         <nav className="nav anim--slideLeft">
             <Fade cascade>
                 <ul className="nav__list">
                     <li className="nav__item">
-                        <a href="/" className="nav__link" data-tooltip="Home">
+                        <Link
+                            to="/"
+                            className="nav__link"
+                            data-tooltip="Home"
+                            data-smooth-scroll="landing"
+                            onClick={navigateTo}
+                        >
                             <i className="fas fa-angle-double-right"></i>
                             <span className="link-text nav__logo-text anim--fadeInRight">
                                 Lu-Vuong Le
                             </span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="nav__item">
-                        <a
-                            href="/#about"
+                        <Link
+                            to="/#about"
                             className="nav__link"
                             data-tooltip="About"
+                            data-smooth-scroll="about"
+                            onClick={navigateTo}
                         >
                             <i className="fas fa-user"></i>
                             <span className="nav__link-text anim--fadeInRight">
                                 About
                             </span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="nav__item">
-                        <a
-                            href="/blog"
+                        <Link
+                            to="/blog"
                             className="nav__link"
                             data-tooltip="Blog"
                         >
@@ -37,48 +57,54 @@ export default function Navigation() {
                             <span className="nav__link-text anim--fadeInRight">
                                 Blog
                             </span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="nav__item">
-                        <a
-                            href="/#featured"
+                        <Link
+                            to="/#featured"
                             className="nav__link"
-                            data-tooltip="Featured Projects"
+                            data-tooltip="Featured"
+                            data-smooth-scroll="featured"
+                            onClick={navigateTo}
                         >
                             <i className="fas fa-code-branch"></i>
                             <span className="nav__link-text anim--fadeInRight">
                                 Featured Projects
                             </span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="nav__item">
-                        <a
-                            href="/#projects"
+                        <Link
+                            to="/#projects"
                             className="nav__link"
-                            data-tooltip="Other Projects"
+                            data-tooltip="Other"
+                            data-smooth-scroll="projects"
+                            onClick={navigateTo}
                         >
                             <i className="fas fa-folder-open"></i>
                             <span className="nav__link-text anim--fadeInRight">
                                 Other Projects
                             </span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="nav__item">
-                        <a
-                            href="/#contact"
+                        <Link
+                            to="/#contact"
                             className="nav__link"
                             data-tooltip="Contact"
+                            data-smooth-scroll="contact"
+                            onClick={navigateTo}
                         >
                             <i className="fas fa-phone"></i>
                             <span className="nav__link-text anim--fadeInRight">
                                 Contact
                             </span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="nav__item">
                         <a
-                            className="nav__link"
                             href={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/docs/Resume.pdf`}
+                            className="nav__link"
                             target="_blank"
                             rel="noopener noreferrer"
                             data-tooltip="Resume"
@@ -91,16 +117,16 @@ export default function Navigation() {
                         </a>
                     </li>
                     <li className="nav__item">
-                        <a
-                            href="/archive"
+                        <Link
+                            to="/archive"
                             className="nav__link"
-                            data-tooltip="Dev Archive"
+                            data-tooltip="Archive"
                         >
                             <i className="fas fa-archive"></i>
                             <span className="nav__link-text anim--fadeInRight">
                                 Dev Archive
                             </span>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </Fade>

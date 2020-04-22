@@ -17,17 +17,6 @@ import "@styles/main.scss"
 
 const Layout = ({ children }) => {
     useEffect(() => {
-        /** Bring in Smooth Scroll Library */
-        if (typeof window !== "undefined") {
-            require("smooth-scroll")('a[href*="#"]', {
-                offset: function(anchor, toggle) {
-                    return 0
-                },
-                updateURL: true,
-                emitEvents: true,
-            })
-        }
-
         /** Set Scroll Event Listener */
         document.addEventListener("scrollStart", e => {
             document.title = e.detail
@@ -40,7 +29,7 @@ const Layout = ({ children }) => {
 
         if (hash) {
             const section = document.getElementById(hash.replace("#", ""))
-            section.scrollIntoView()
+            section.scrollIntoView({ behavior: "smooth" })
         }
 
         return () => {}

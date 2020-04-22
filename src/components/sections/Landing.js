@@ -9,7 +9,7 @@ import Fade from "react-reveal/Fade"
 export default function Landing({ typedEl }) {
     return (
         <section
-            id="sectionLanding"
+            id="landing"
             className="section section__landing section--light"
             data-name="Home"
         >
