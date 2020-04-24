@@ -2,8 +2,11 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: static/assets/media
-public_folder: /assets/media
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: luvuong-le
+    api_key: 298775176747774
 
 publish_mode: editorial_workflow
 site_url: https://lu-vuong-le.me/
@@ -20,4 +23,4 @@ collections:
       - { label: "Featured Image", name: "thumbnail", widget: "image", required: false }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "select", multiple: true, options: ["Design", "Web Dev", "UX / UI", "Programming"]}
+      - { label: "Tags", name: "tags", widget: "select", multiple: true, options: ["design", "web", "ux", "ui", "programming"]}

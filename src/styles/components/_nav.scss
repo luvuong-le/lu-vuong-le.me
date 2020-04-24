@@ -83,11 +83,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0 3px;
 
         @include breakpoint(desktop) {
             height: initial;
             justify-content: flex-start;
-            padding: 0 3px;
+            padding: 0;
         }
 
         & a {
@@ -142,6 +143,8 @@
             @include breakpoint(desktop) {
                 margin: 0 3rem; 
                 width: 5%;
+                position: relative;
+                top: 0;
             }
         }
 
@@ -173,6 +176,10 @@
             transition: opacity .5s ease;
             font-size: 1.1rem;
             z-index: 1;
+
+            @include breakpoint(desktop) {
+                opacity: 0;
+            }
         }
     }
 }

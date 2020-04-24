@@ -2,19 +2,19 @@ import React from "react"
 import { Link } from "gatsby"
 import Fade from "react-reveal/Fade"
 
-export default function Navigation() {
-    const navigateTo = e => {
-        if (window.location.pathname === "/") {
-            e.preventDefault()
+export const navigateTo = e => {
+    if (window.location.pathname === "/") {
+        e.preventDefault()
 
-            const scrollToElement = document.getElementById(
-                e.currentTarget.dataset.smoothScroll
-            )
+        const scrollToElement = document.getElementById(
+            e.currentTarget.dataset.smoothScroll
+        )
 
-            scrollToElement.scrollIntoView({ behavior: "smooth" })
-        }
+        scrollToElement.scrollIntoView({ behavior: "smooth" })
     }
+}
 
+export default function Navigation() {
     return (
         <nav className="nav anim--slideLeft">
             <Fade cascade>

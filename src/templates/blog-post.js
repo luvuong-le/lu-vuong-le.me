@@ -1,12 +1,20 @@
 import React from "react"
 import { graphql } from "gatsby"
+import LazyLoad from "react-lazyload"
 import styled from "@emotion/styled"
 import Layout from "@components/layout/Layout"
+import Tag from "@components/tags/Tag"
+import { CategoryColorMapping } from "@components/blog/BlogCategoryMapping"
 
 import Fade from "react-reveal/Fade"
 
 export const query = graphql`
     query($slug: String!) {
+        site {
+            siteMetadata {
+                title
+            }
+        }
         markdownRemark(fields: { slug: { eq: $slug } }) {
             html
             frontmatter {
@@ -64,12 +72,64 @@ const PostTitle = styled.span`
 
 const PostDate = styled.span`
     display: block;
-    margin: 0 0 4rem 0;
+    margin: 0 0 1rem 0;
     color: #bbb;
 `
 
+const PostTags = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 1rem;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1.3rem;
+    }
+`
+
+const PostImage = styled.img`
+    padding: 0;
+    margin: 0;
+    width: 100%;
+`;
+
+const PostAuthor = styled.div`
+    display: flex;
+    margin: 4rem 0;
+`;
+
+const PostAuthorDetails = styled.div`
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`;
+
+const PostProfilePic = styled.img`
+    border-radius: 100%;
+    width: 4rem;
+    height: 4rem;
+`;
+
+const PostSocialLinkWrapper = styled.div`
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-end;
+    margin: 5px 0;
+`;
+
+const PostSocialLink = styled.span`
+    margin-right: 10px;
+    margin-top: 5px;
+    color: #aaa;
+`;
+
+const PostSocialProfile = styled.div`
+    display: flex;
+    align-content: center;
+`;
+
 export default ({ data }) => {
-    const post = data.markdownRemark
+    const post = data.markdownRemark;
     return (
         <Layout>
             <Fade>
@@ -77,10 +137,58 @@ export default ({ data }) => {
                     <PostContainer className="post post__container">
                         <PostTitle>{post.frontmatter.title}</PostTitle>
                         <PostDate>
-                            {post.frontmatter.date} -{" "}
+                            {post.frontmatter.date} · {" "}
                             {post.fields.readingTime.text}
                         </PostDate>
-                        {/* TODO: Add User Details - Name - Socials */}
+                        <PostTags>
+                            {post.frontmatter.tags &&
+                                post.frontmatter.tags.map((tagName, index) => (
+                                    <Tag
+                                        key={index}
+                                        name={tagName}
+                                        style={{
+                                            background: `${CategoryColorMapping[tagName]}`,
+                                            color: "#2479EC",
+                                            borderRadius: '0',
+                                            fontWeight: 'normal'
+                                        }}
+                                    />
+                                ))}
+                        </PostTags>
+                        <PostAuthor>
+                            <PostSocialProfile>
+                                <PostProfilePic src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/images/profile.jpg`} />
+                            </PostSocialProfile>
+                            <PostAuthorDetails>
+                                <span>{data.site.siteMetadata.title}</span>
+                                <PostSocialLinkWrapper>
+                                    <a
+                                        href="https://www.linkedin.com/in/lu-vuongle/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <PostSocialLink>LinkedIn</PostSocialLink>
+                                    </a>
+                                    <a
+                                        href="https://twitter.com/luvuongle"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <PostSocialLink>Twitter</PostSocialLink>
+                                    </a>
+                                    <a
+                                        href="https://github.com/luvuong-le"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <PostSocialLink>Github</PostSocialLink>
+                                    </a>
+                                </PostSocialLinkWrapper>
+                            </PostAuthorDetails>
+                        </PostAuthor>
+                        <LazyLoad>
+                            <PostImage src={post.frontmatter.thumbnail} />
+                        </LazyLoad>
                         <div dangerouslySetInnerHTML={{ __html: post.html }} />
                     </PostContainer>
                 </Section>

@@ -69,9 +69,10 @@ const BlogHeadingBreak = styled.div`
 
 const BlogItemContainer = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     margin: 4rem 0 0 0;
-    grid-gap: 0.5rem;
+    grid-gap: 1rem;
+    grid-auto-rows: 200px;
 
     @media only screen and (max-width: 768px) {
         grid-template-columns: 1fr;

@@ -1,8 +1,8 @@
 import React from "react"
 import Container from "@components/layout/Container"
 import LazyLoad from "react-lazyload"
-
 import SEO from "@components/seo/Seo"
+import { navigateTo } from "@components/layout/Navigation";
 
 import Fade from "react-reveal/Fade"
 
@@ -86,6 +86,8 @@ export default function Landing({ typedEl }) {
                                 <a
                                     href="#contact"
                                     className="btn btn--primary btn--block"
+                                    data-smooth-scroll="contact"
+                                    onClick={navigateTo}
                                 >
                                     <i className="fas fa-at"></i>
                                     <span className="margin-l-sm">Contact</span>
