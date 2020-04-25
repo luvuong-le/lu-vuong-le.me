@@ -7,6 +7,8 @@ import Tag from "@components/tags/Tag"
 const PostItemContainer = styled.div`
     background: white;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin: 1rem 0;
+    height: fit-content;
 
     &:hover {
         box-shadow: 0 30px 90px rgba(31, 36, 48, 0.08);
@@ -55,7 +57,7 @@ const PostImage = styled.img`
     padding: 0;
     margin: 0;
     width: 100%;
-`;
+`
 
 function BlogItem({ post }) {
     return (

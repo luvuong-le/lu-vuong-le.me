@@ -39,7 +39,11 @@ const Section = styled.section`
     height: 100%;
     position: relative;
     padding-top: 5rem;
-    padding-bottom: 8rem;
+    padding-bottom: 5rem;
+
+    @media only screen and (max-width: 768px) {
+        padding-bottom: 10rem;
+    }
 `
 
 const PostContainer = styled.div`
@@ -90,46 +94,46 @@ const PostImage = styled.img`
     padding: 0;
     margin: 0;
     width: 100%;
-`;
+`
 
 const PostAuthor = styled.div`
     display: flex;
     margin: 4rem 0;
-`;
+`
 
 const PostAuthorDetails = styled.div`
     margin-left: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-`;
+`
 
 const PostProfilePic = styled.img`
     border-radius: 100%;
     width: 4rem;
     height: 4rem;
-`;
+`
 
 const PostSocialLinkWrapper = styled.div`
     display: flex;
     align-items: flex-end;
     align-content: flex-end;
     margin: 5px 0;
-`;
+`
 
 const PostSocialLink = styled.span`
     margin-right: 10px;
     margin-top: 5px;
     color: #aaa;
-`;
+`
 
 const PostSocialProfile = styled.div`
     display: flex;
     align-content: center;
-`;
+`
 
 export default ({ data }) => {
-    const post = data.markdownRemark;
+    const post = data.markdownRemark
     return (
         <Layout>
             <Fade>
@@ -137,7 +141,7 @@ export default ({ data }) => {
                     <PostContainer className="post post__container">
                         <PostTitle>{post.frontmatter.title}</PostTitle>
                         <PostDate>
-                            {post.frontmatter.date} · {" "}
+                            {post.frontmatter.date} ·{" "}
                             {post.fields.readingTime.text}
                         </PostDate>
                         <PostTags>
@@ -149,15 +153,17 @@ export default ({ data }) => {
                                         style={{
                                             background: `${CategoryColorMapping[tagName]}`,
                                             color: "#2479EC",
-                                            borderRadius: '0',
-                                            fontWeight: 'normal'
+                                            borderRadius: "0",
+                                            fontWeight: "normal",
                                         }}
                                     />
                                 ))}
                         </PostTags>
                         <PostAuthor>
                             <PostSocialProfile>
-                                <PostProfilePic src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/images/profile.jpg`} />
+                                <PostProfilePic
+                                    src={`${process.env.GATSBY_CLOUDFRONT_CDN_URL}/assets/images/profile.jpg`}
+                                />
                             </PostSocialProfile>
                             <PostAuthorDetails>
                                 <span>{data.site.siteMetadata.title}</span>
@@ -167,7 +173,9 @@ export default ({ data }) => {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <PostSocialLink>LinkedIn</PostSocialLink>
+                                        <PostSocialLink>
+                                            LinkedIn
+                                        </PostSocialLink>
                                     </a>
                                     <a
                                         href="https://twitter.com/luvuongle"

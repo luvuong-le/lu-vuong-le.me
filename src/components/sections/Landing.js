@@ -2,7 +2,7 @@ import React from "react"
 import Container from "@components/layout/Container"
 import LazyLoad from "react-lazyload"
 import SEO from "@components/seo/Seo"
-import { navigateTo } from "@components/layout/Navigation";
+import { navigateTo } from "@components/layout/Navigation"
 
 import Fade from "react-reveal/Fade"
 

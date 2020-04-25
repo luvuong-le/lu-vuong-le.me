@@ -5,6 +5,7 @@ import styled from "@emotion/styled"
 import Layout from "@components/layout/Layout"
 import SEO from "@components/seo/Seo"
 import BlogItem from "@components/blog/BlogItem"
+import AlgoliaSearch from "@components/search/AlgoliaSearch"
 import Fade from "react-reveal/Fade"
 
 export const query = graphql`
@@ -37,7 +38,7 @@ export const query = graphql`
 const Section = styled.section`
     background: #f9fafb;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: relative;
     padding-top: 5rem;
 
@@ -72,10 +73,10 @@ const BlogItemContainer = styled.div`
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     margin: 4rem 0 0 0;
     grid-gap: 1rem;
-    grid-auto-rows: 200px;
 
     @media only screen and (max-width: 768px) {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         padding-bottom: 8rem;
     }
@@ -93,6 +94,7 @@ const BlogPage = ({ data }) => {
                                 Blog
                             </BlogHeading>
                         </BlogHeadingBreak>
+                        <AlgoliaSearch indexName="Posts" />
                         <BlogItemContainer>
                             {data.allMarkdownRemark.edges.map(({ node }) => (
                                 <BlogItem key={node.id} post={node} />
