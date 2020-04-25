@@ -1,11 +1,11 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-import { css } from "@emotion/core"
+import { graphql } from "gatsby"
 import styled from "@emotion/styled"
 
 import Layout from "@components/layout/Layout"
 import SEO from "@components/seo/Seo"
 import BlogItem from "@components/blog/BlogItem"
+import AlgoliaSearch from "@components/search/AlgoliaSearch"
 import Fade from "react-reveal/Fade"
 
 export const query = graphql`
@@ -38,18 +38,48 @@ export const query = graphql`
 const Section = styled.section`
     background: #f9fafb;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    position: relative;
+    padding-top: 5rem;
+
+    @media only screen and (max-width: 768px) {
+        height: 100%;
+    }
 `
 
 const Container = styled.div`
     padding: 3rem 10rem;
+
+    @media only screen and (max-width: 768px) {
+        padding: 0 3rem;
+    }
+`
+
+const BlogHeading = styled.h1`
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+        font-size: 3rem;
+    }
+`
+
+const BlogHeadingBreak = styled.div`
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+    }
 `
 
 const BlogItemContainer = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     margin: 4rem 0 0 0;
-    grid-gap: 0.5rem;
+    grid-gap: 1rem;
+
+    @media only screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 8rem;
+    }
 `
 
 const BlogPage = ({ data }) => {
@@ -57,27 +87,19 @@ const BlogPage = ({ data }) => {
         <Layout>
             <SEO title="Home | Lu-Vuong Le" />
             <Fade>
-                <Section id="sectionBlog" className="section section__blog">
+                <Section>
                     <Container>
-                        <div className="full-width">
-                            <div className="section__header--break">
-                                <div>
-                                    <h1 className="section__header-text">
-                                        Blog
-                                    </h1>
-                                </div>
-                            </div>
-                            <h4 className="fsize-sm">
-                                {data.allMarkdownRemark.totalCount} Posts
-                            </h4>
-                            <BlogItemContainer>
-                                {data.allMarkdownRemark.edges.map(
-                                    ({ node }) => (
-                                        <BlogItem key={node.id} post={node} />
-                                    )
-                                )}
-                            </BlogItemContainer>
-                        </div>
+                        <BlogHeadingBreak className="section__header--break">
+                            <BlogHeading className="section__header-text">
+                                Blog
+                            </BlogHeading>
+                        </BlogHeadingBreak>
+                        <AlgoliaSearch indexName="Posts" />
+                        <BlogItemContainer>
+                            {data.allMarkdownRemark.edges.map(({ node }) => (
+                                <BlogItem key={node.id} post={node} />
+                            ))}
+                        </BlogItemContainer>
                     </Container>
                 </Section>
             </Fade>

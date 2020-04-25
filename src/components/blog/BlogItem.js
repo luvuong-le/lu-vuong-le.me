@@ -1,10 +1,20 @@
 import React from "react"
 import { Link } from "gatsby"
-import { css } from "@emotion/core"
+import LazyLoad from "react-lazyload"
 import styled from "@emotion/styled"
 import Tag from "@components/tags/Tag"
 
-const PostItemContainer = styled.div``
+const PostItemContainer = styled.div`
+    background: white;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin: 1rem 0;
+    height: fit-content;
+
+    &:hover {
+        box-shadow: 0 30px 90px rgba(31, 36, 48, 0.08);
+        transform: translateY(-5px);
+    }
+`
 
 const PostItem = styled.div`
     display: flex;
@@ -13,12 +23,6 @@ const PostItem = styled.div`
     font-size: 1.6rem;
     background: #fff;
     cursor: pointer;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-
-    &:hover {
-        box-shadow: 0 30px 90px rgba(31, 36, 48, 0.08);
-        transform: translateY(-5px);
-    }
 `
 
 const PostTitle = styled.span`
@@ -42,15 +46,29 @@ const PostContent = styled.p`
 
 const PostTags = styled.div`
     display: flex;
+    flex-flow: row wrap;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1.3rem;
+    }
+`
+
+const PostImage = styled.img`
+    padding: 0;
+    margin: 0;
+    width: 100%;
 `
 
 function BlogItem({ post }) {
     return (
         <PostItemContainer>
             <Link to={post.fields.slug}>
+                <LazyLoad>
+                    <PostImage src={post.frontmatter.thumbnail} />
+                </LazyLoad>
                 <PostItem key={post.id}>
                     <PostDate>
-                        {post.frontmatter.date} - {post.fields.readingTime.text}
+                        {post.frontmatter.date} · {post.fields.readingTime.text}
                     </PostDate>
                     <PostTitle>{post.frontmatter.title} </PostTitle>
                     <PostContent>{post.excerpt}</PostContent>

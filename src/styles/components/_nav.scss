@@ -83,10 +83,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0 3px;
 
         @include breakpoint(desktop) {
             height: initial;
             justify-content: flex-start;
+            padding: 0;
         }
 
         & a {
@@ -135,10 +137,14 @@
 
         & i {
             font-size: 2rem;
+            position: absolute;
+            top: 10px;
             
             @include breakpoint(desktop) {
                 margin: 0 3rem; 
                 width: 5%;
+                position: relative;
+                top: 0;
             }
         }
 
@@ -159,17 +165,21 @@
         /* Tool Tip */
         &::before {
             content: attr(data-tooltip);
-            bottom: 100%;
+            bottom: 0%;
             position: absolute;
-            background: $dark-background-color;
+            // background: $dark-background-color;
             color: #ffffff;
             border-radius: 3px;
             padding: .5rem;
             text-align: center;
-            opacity: 0;
+            // opacity: 0;
             transition: opacity .5s ease;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             z-index: 1;
+
+            @include breakpoint(desktop) {
+                opacity: 0;
+            }
         }
     }
 }

@@ -1,3 +1,5 @@
+const queries = require("./src/algolia/algolia")
+
 if (process.env.NODE_ENV === "development") {
     require("dotenv").config({
         path: `.env.${process.env.NODE_ENV}`,
@@ -138,7 +140,12 @@ module.exports = {
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         `gatsby-plugin-offline`,
-        `gatsby-plugin-netlify-cms`,
+        {
+            resolve: `gatsby-plugin-netlify-cms`,
+            options: {
+                modulePath: `${__dirname}/src/cms/config.js`,
+            },
+        },
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
@@ -171,5 +178,14 @@ module.exports = {
         },
         `gatsby-plugin-feed`,
         `gatsby-plugin-sitemap`,
+        {
+            resolve: `gatsby-plugin-algolia`,
+            options: {
+                appId: process.env.GATSBY_ALGOLIA_APP_ID,
+                apiKey: process.env.ALGOLIA_ADMIN_KEY,
+                queries,
+                chunkSize: 10000, // default: 1000
+            },
+        },
     ],
 }

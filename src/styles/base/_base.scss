@@ -30,7 +30,13 @@ img {
     width: 100%;
 }
 
+.ais-Highlight-highlighted {
+    background: #13315C;
+    color: #ffffff;
+}
+
 main {
+    height: 100%;
     margin-left: 8rem;
     transition: 200ms ease;
 }
