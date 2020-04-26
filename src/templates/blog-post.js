@@ -5,6 +5,7 @@ import styled from "@emotion/styled"
 import Layout from "@components/layout/Layout"
 import Tag from "@components/tags/Tag"
 import { CategoryColorMapping } from "@components/blog/BlogCategoryMapping"
+import { DiscussionEmbed } from "disqus-react"
 
 import Fade from "react-reveal/Fade"
 
@@ -28,6 +29,7 @@ export const query = graphql`
                 readingTime {
                     text
                 }
+                slug
             }
         }
     }
@@ -134,6 +136,11 @@ const PostSocialProfile = styled.div`
 
 export default ({ data }) => {
     const post = data.markdownRemark
+    const disqusConfig = {
+        shortname: process.env.GATSBY_DISQUS_NAME,
+        config: { identifier: post.fields.slug, title: post.frontmatter.title },
+    }
+
     return (
         <Layout>
             <Fade>
@@ -198,6 +205,7 @@ export default ({ data }) => {
                             <PostImage src={post.frontmatter.thumbnail} />
                         </LazyLoad>
                         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                        <DiscussionEmbed {...disqusConfig} />
                     </PostContainer>
                 </Section>
             </Fade>

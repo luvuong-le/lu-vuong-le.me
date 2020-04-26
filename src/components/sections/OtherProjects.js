@@ -1,5 +1,6 @@
 import React from "react"
 import Container from "@components/layout/Container"
+import { Link } from "gatsby"
 
 import Tag from "@components/tags/Tag.js"
 import TagIcon from "@components/tags/TagIcon.js"
@@ -398,9 +399,12 @@ export default function OtherProjects() {
                                 >
                                     View My Github
                                 </a>
-                                <a href="/archive" className="btn btn--primary">
+                                <Link
+                                    to="/archive"
+                                    className="btn btn--primary"
+                                >
                                     View More In Archive
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
