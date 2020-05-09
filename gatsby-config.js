@@ -33,6 +33,23 @@ module.exports = {
             options: {
                 plugins: [
                     {
+                        resolve: "gatsby-remark-code-buttons",
+                        options: {
+                            // Optional button text. Defaults to ''.
+                            buttonText: `Copy Code`,
+                            // Optional toaster text. Defaults to ''.
+                            toasterText: "Copied Code Successfully!",
+                            // Optional toaster duration. Defaults to 3500.
+                            toasterDuration: 5000,
+                        },
+                    },
+                    {
+                        resolve: "gatsby-remark-prismjs-title",
+                        options: {
+                            className: "remark-prismjs-title",
+                        },
+                    },
+                    {
                         resolve: `gatsby-remark-prismjs`,
                         options: {
                             // Class prefix for <pre> tags containing syntax highlighting;

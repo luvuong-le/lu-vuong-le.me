@@ -6,3 +6,6 @@
 
 // You can delete this file if you're not using it
 require("prismjs/themes/prism-tomorrow.css")
+
+// Line Numbers
+// require("prismjs/plugins/line-numbers/prism-line-numbers.css")
