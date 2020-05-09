@@ -1,7 +1,7 @@
 ---
 title: CSS Specificity Explained
 date: 2020-05-09T12:26:41.207Z
-thumbnail: ""
+thumbnail: https://res.cloudinary.com/luvuong-le/image/upload/v1589028390/Blog%20Posts/CSS%20Specificity/1_lD9NkPZVOBMX29CccwoEDA_if7f8w.jpg
 description: What is CSS Specificity? How do you calculate it?
 tags:
   - web
